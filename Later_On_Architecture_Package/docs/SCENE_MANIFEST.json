@@ -1,0 +1,2452 @@
+{
+  "project": {
+    "title": "后来呢",
+    "slug": "hou-lai-ne",
+    "version": "2.0",
+    "date": "2026-10-24",
+    "entry": "S01"
+  },
+  "kind": "planning-index-not-runtime-dialogue-data",
+  "status": "design-only",
+  "counts": {
+    "storyNodes": 39,
+    "backgroundCompositions": 33,
+    "plannedBackgroundFiles": 35,
+    "endings": 4
+  },
+  "referenceImage": "../references/second-nature-style.png",
+  "renderer": {
+    "preserveStageDuringDialogue": true,
+    "stageGroupIsNotNodeId": true,
+    "assetStatus": "planned",
+    "bubbleTextIsHtml": true,
+    "layoutCoordinates": "normalized-0-to-1-requires-art-review"
+  },
+  "routingFactNotes": {
+    "transparency": "规划别名 T；正式数据模型应收紧类型。",
+    "reliability": "规划别名 R；fulfilled 包含实际兑现改约，repaired 包含实际修复。",
+    "plan": "只有共同计划成立才允许进入 B10。"
+  },
+  "layouts": {
+    "duo": {
+      "xiaowu": {
+        "anchor": [
+          0.28,
+          0.65
+        ],
+        "bubbleRect": [
+          0.05,
+          0.06,
+          0.39,
+          0.23
+        ]
+      },
+      "xiaomeng": {
+        "anchor": [
+          0.72,
+          0.65
+        ],
+        "bubbleRect": [
+          0.56,
+          0.06,
+          0.39,
+          0.23
+        ]
+      }
+    },
+    "video": {
+      "xiaowu": {
+        "panel": "left",
+        "bubbleRect": [
+          0.03,
+          0.05,
+          0.42,
+          0.23
+        ]
+      },
+      "xiaomeng": {
+        "panel": "right",
+        "bubbleRect": [
+          0.55,
+          0.05,
+          0.42,
+          0.23
+        ]
+      }
+    },
+    "phone": {
+      "xiaowu": {
+        "anchor": [
+          0.3,
+          0.64
+        ],
+        "bubbleRect": [
+          0.04,
+          0.06,
+          0.4,
+          0.23
+        ]
+      },
+      "remoteMessage": {
+        "panel": "phone",
+        "bubbleRect": [
+          0.58,
+          0.08,
+          0.35,
+          0.3
+        ]
+      }
+    },
+    "workshop": {
+      "xiaowu": {
+        "anchor": [
+          0.35,
+          0.65
+        ],
+        "bubbleRect": [
+          0.04,
+          0.05,
+          0.4,
+          0.22
+        ]
+      },
+      "classmate": {
+        "anchor": [
+          0.8,
+          0.64
+        ],
+        "bubbleRect": [
+          0.57,
+          0.05,
+          0.38,
+          0.22
+        ]
+      }
+    }
+  },
+  "backgrounds": [
+    {
+      "id": "BG01",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG01-stadium-high.webp"
+        }
+      ],
+      "usedBy": [
+        "S01"
+      ]
+    },
+    {
+      "id": "BG02",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG02-classroom-day.webp"
+        }
+      ],
+      "usedBy": [
+        "S02"
+      ]
+    },
+    {
+      "id": "BG03",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG03-classroom-night.webp"
+        }
+      ],
+      "usedBy": [
+        "S03"
+      ]
+    },
+    {
+      "id": "BG04",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG04-classroom-door.webp"
+        }
+      ],
+      "usedBy": [
+        "S04"
+      ]
+    },
+    {
+      "id": "BG05",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG05-gym-vending.webp"
+        }
+      ],
+      "usedBy": [
+        "S05"
+      ]
+    },
+    {
+      "id": "BG06",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG06-bus-rain.webp"
+        }
+      ],
+      "usedBy": [
+        "S06"
+      ]
+    },
+    {
+      "id": "BG07",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG07-classroom-application.webp"
+        }
+      ],
+      "usedBy": [
+        "S07"
+      ]
+    },
+    {
+      "id": "BG08",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG08-noodle-shop.webp"
+        }
+      ],
+      "usedBy": [
+        "S08"
+      ]
+    },
+    {
+      "id": "BG09",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG09-bridge.webp"
+        }
+      ],
+      "usedBy": [
+        "S09",
+        "B02",
+        "B03"
+      ]
+    },
+    {
+      "id": "BG10",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG10-airport.webp"
+        }
+      ],
+      "usedBy": [
+        "S10"
+      ]
+    },
+    {
+      "id": "BG11",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG11-kitchen-video.webp"
+        }
+      ],
+      "usedBy": [
+        "S11"
+      ]
+    },
+    {
+      "id": "BG12",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG12-desk-live.webp"
+        }
+      ],
+      "usedBy": [
+        "S12"
+      ]
+    },
+    {
+      "id": "BG13",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG13-campus-radio.webp"
+        }
+      ],
+      "usedBy": [
+        "S13"
+      ]
+    },
+    {
+      "id": "BG14",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG14-career-video.webp"
+        }
+      ],
+      "usedBy": [
+        "S14",
+        "B08",
+        "B09",
+        "B10"
+      ]
+    },
+    {
+      "id": "BG15",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG15-bus-evening.webp"
+        }
+      ],
+      "usedBy": [
+        "B01"
+      ]
+    },
+    {
+      "id": "BG16",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG16-radio-corridor-video.webp"
+        }
+      ],
+      "usedBy": [
+        "B04"
+      ]
+    },
+    {
+      "id": "BG17",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG17-replay-study-video.webp"
+        }
+      ],
+      "usedBy": [
+        "B05"
+      ]
+    },
+    {
+      "id": "BG18",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG18-shop-bedroom-call.webp"
+        }
+      ],
+      "usedBy": [
+        "B06"
+      ]
+    },
+    {
+      "id": "BG19",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG19-hardware-lab.webp"
+        }
+      ],
+      "usedBy": [
+        "B07"
+      ]
+    },
+    {
+      "id": "BG20",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG20-work-rain-shelter.webp"
+        }
+      ],
+      "usedBy": [
+        "B11"
+      ]
+    },
+    {
+      "id": "BG21",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG21-bookshop-cafe.webp"
+        }
+      ],
+      "usedBy": [
+        "F01"
+      ]
+    },
+    {
+      "id": "BG22",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "high",
+          "path": "public/art/backgrounds/BG22-call-room-high.webp"
+        },
+        {
+          "variant": "university",
+          "path": "public/art/backgrounds/BG22-call-room-university.webp"
+        },
+        {
+          "variant": "adult",
+          "path": "public/art/backgrounds/BG22-call-room-adult.webp"
+        }
+      ],
+      "usedBy": [
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "id": "BG23",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG23-breakfast-shop.webp"
+        }
+      ],
+      "usedBy": [
+        "D03"
+      ]
+    },
+    {
+      "id": "BG24",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG24-adult-kitchen.webp"
+        }
+      ],
+      "usedBy": [
+        "E01"
+      ]
+    },
+    {
+      "id": "BG25",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG25-stadium-reunion.webp"
+        }
+      ],
+      "usedBy": [
+        "E02"
+      ]
+    },
+    {
+      "id": "BG26",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG26-bookshop-crossing.webp"
+        }
+      ],
+      "usedBy": [
+        "E03"
+      ]
+    },
+    {
+      "id": "BG27",
+      "status": "planned",
+      "logicalSize": [
+        1600,
+        900
+      ],
+      "deliverySize": [
+        1920,
+        1080
+      ],
+      "files": [
+        {
+          "variant": "base",
+          "path": "public/art/backgrounds/BG27-metro.webp"
+        }
+      ],
+      "usedBy": [
+        "E04"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "S01",
+      "title": "借你一只耳朵",
+      "chapter": "chapter-1",
+      "backgroundId": "BG01",
+      "stageGroup": "BG01",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "listened-together",
+        "asked-song-title",
+        "left-to-help"
+      ],
+      "visualBrief": "操场看台。远处学生在调试音响，旗绳贴着旗杆。小梦坐右侧，帽子放在膝上；小五站左侧台阶，脚边是落下的水杯。夜色用蓝灰色和少量排线表现。耳机线是两人之间主要的视觉联系。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S01｜借你一只耳朵"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "接过耳机，坐近一点。",
+          "routes": [
+            {
+              "to": "S02"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "先问她在听哪一首。",
+          "routes": [
+            {
+              "to": "S02"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "指指下面，先去帮忙搬椅子。",
+          "routes": [
+            {
+              "to": "S02"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S02",
+      "title": "这不是猫",
+      "chapter": "chapter-1",
+      "backgroundId": "BG02",
+      "stageGroup": "BG02",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "teacher-drawing",
+        "six-legged-cat",
+        "notebook-closed"
+      ],
+      "visualBrief": "阳光照着课桌，窗边搭着值日抹布。小梦在右侧收英语笔记，小五站在桌边。笔记角落有一只戴眼镜的奇怪小动物；不要把整页文字画进背景。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S02｜这不是猫"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "压低声音：“班主任？”",
+          "routes": [
+            {
+              "to": "S15"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "翻到空白处，补画一只真正的猫。",
+          "routes": [
+            {
+              "to": "S15"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把本子合好：“秘密，我没看见。”",
+          "routes": [
+            {
+              "to": "S15"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S03",
+      "title": "这一行开始",
+      "chapter": "chapter-1",
+      "backgroundId": "BG03",
+      "stageGroup": "BG03",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "相邻的课桌，数学卷子、英语练习、橡皮屑。小五在左，小梦在右；草稿纸放在两人中间。窗外是操场灯，后排同学只用简化剪影。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S03｜这一行开始"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "把纸推回中间：“哪一行开始没懂？”",
+          "routes": [
+            {
+              "to": "S04"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "先停下来，承认自己也算错了。",
+          "routes": [
+            {
+              "to": "S04"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把完整步骤写给她，让她慢慢看。",
+          "routes": [
+            {
+              "to": "S04"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S04",
+      "title": "明天下午有球赛",
+      "chapter": "chapter-1",
+      "backgroundId": "BG04",
+      "stageGroup": "BG04",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "教室后门，小五抱球，小梦坐在窗边改校园广播站的试音稿。稿子上只有简短划线，不呈现大段可读文字。风把门口值日表吹起一角。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S04｜明天下午有球赛"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“结束了再来，我给你留个位置。”",
+          "routes": [
+            {
+              "to": "S05"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "“要不要先拿我练一遍？”",
+          "routes": [
+            {
+              "to": "S05"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "“试音要紧，球赛下次还有。”",
+          "routes": [
+            {
+              "to": "S05"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S05",
+      "title": "你也没进？",
+      "chapter": "chapter-1",
+      "backgroundId": "BG05",
+      "stageGroup": "BG05",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "体育馆外的自动售货机，夕光把球网影子投在墙上。小五坐左侧矮台，球停在鞋边；小梦右侧拿着折过的试音稿。机器里饮料轮廓各不相同。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S05｜你也没进？"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "买两瓶水，陪她坐一会儿。",
+          "routes": [
+            {
+              "to": "S16"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "问她愿不愿意去吃点东西。",
+          "routes": [
+            {
+              "to": "S16"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "讲讲自己最后那次失误。",
+          "routes": [
+            {
+              "to": "S16"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S06",
+      "title": "伞往中间一点",
+      "chapter": "chapter-1",
+      "backgroundId": "BG06",
+      "stageGroup": "BG06",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "校门口公交站，雨滴切过路灯。小五撑伞站左侧，小梦靠近站牌。地面反光里有两人的鞋，远处便利店有亮着的招牌，不写无关正文。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S06｜伞往中间一点"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“那你靠近一点。”",
+          "routes": [
+            {
+              "to": "S18"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "接过她递来的纸巾：“好，我擦一下。”",
+          "routes": [
+            {
+              "to": "S18"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "“你到家了，能跟我说一声吗？”",
+          "routes": [
+            {
+              "to": "S18"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S07",
+      "title": "那张没收起来的表",
+      "chapter": "chapter-2",
+      "backgroundId": "BG07",
+      "stageGroup": "BG07",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "disclosed-early",
+        "promised-exam-talk",
+        "minimized-application"
+      ],
+      "visualBrief": "安静教室，大学招生册压着试卷。小五书包开着，露出一张海外申请材料清单。小梦手指停在本省大学的广播楼照片旁。小五手机上只有母亲一条消息：“材料晚上带回来。”",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S07｜那张没收起来的表"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "告诉她父母的情况和申请的事。",
+          "routes": [
+            {
+              "to": "S20"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "承认有别的可能，约好考后讲清。",
+          "routes": [
+            {
+              "to": "S20"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把表收起来，说只是备选。",
+          "routes": [
+            {
+              "to": "S20"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S08",
+      "title": "高考后的面馆",
+      "chapter": "chapter-2",
+      "backgroundId": "BG08",
+      "stageGroup": "BG08",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "校门外小面馆，卷闸门半开，电扇朝两人转。两碗面、没拆好的筷子、小梦手边的柠檬水。小五左侧，小梦右侧，桌下两人的书包靠在一起。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S08｜高考后的面馆"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“以后，我想以男朋友的身份找你。”",
+          "routes": [
+            {
+              "to": "S09"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "“吃完陪我走一段，我再说。”",
+          "routes": [
+            {
+              "to": "B01"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "“就是想说，做你同桌挺开心的。”",
+          "routes": [
+            {
+              "to": "B01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S09",
+      "title": "录取结果出来以后",
+      "chapter": "chapter-2",
+      "backgroundId": "BG09",
+      "stageGroup": "BG09",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "early-disclosure",
+        "post-exam-disclosure",
+        "concealment-revealed"
+      ],
+      "visualBrief": "小区外的小桥。小梦扶着自行车，小五手里有两瓶未开的水。河对岸有人遛狗，桥栏一角漆掉了。画面中的水瓶一直没有递出去。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S09｜录取结果出来以后"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "说清自己知道的时间，也承认没说好的地方。",
+          "routes": [
+            {
+              "to": "B02"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "“我不想耽误你，你不用等我。”",
+          "routes": [
+            {
+              "to": "B03"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "承认自己不愿开始异地，提出分开。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S10",
+      "title": "先放开一下",
+      "chapter": "chapter-2",
+      "backgroundId": "BG10",
+      "stageGroup": "BG10",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "hug",
+        "flight-plan",
+        "photo"
+      ],
+      "visualBrief": "机场出发层的落地窗，外侧排着行李车。母亲在远景查看证件，不介入对白。小五拖箱子，小梦捏着纸袋。镜头保持在安检入口外，不把登机口与公共送别区混画。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S10｜先放开一下"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "抱住她，等她先松开。",
+          "routes": [
+            {
+              "to": "S11"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "把行程和落地时间发给她。",
+          "routes": [
+            {
+              "to": "S11"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "问她：“最后陪我拍张照？”",
+          "routes": [
+            {
+              "to": "S11"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S11",
+      "title": "把镜头抬高一点",
+      "chapter": "chapter-3",
+      "backgroundId": "BG11",
+      "stageGroup": "BG11",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "漫画分格：左侧是小五租住的小厨房，锅里有煎焦的蛋；右侧是手机里小梦宿舍楼下的花坛。两地不是同时天黑，按故事内设定呈现左侧白天、右侧晚间。这里不显示具体时差数字。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S11｜把镜头抬高一点"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "一起找两个都方便的通话时间。",
+          "routes": [
+            {
+              "to": "S12"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "想每天连着视频，舍不得挂断。",
+          "routes": [
+            {
+              "to": "S12"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "先结束通话，明天发做好的早饭。",
+          "routes": [
+            {
+              "to": "S12"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S12",
+      "title": "她的第一次直播",
+      "chapter": "chapter-3",
+      "backgroundId": "BG12",
+      "stageGroup": "BG12",
+      "ageStage": "university",
+      "layoutTemplate": "phone",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "小五的书桌，课程项目的电路板、校内兼职排班表、手机里的节目链接。屏幕另一侧可用小幅画中画呈现广播室：小梦戴着耳机，手指按住稿纸。不是把人物摆进同一个空间。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S12｜她的第一次直播"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "婉拒代班，按约定听直播。",
+          "routes": [
+            {
+              "to": "B04"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "接下代班，现在就告诉她，重新约时间。",
+          "routes": [
+            {
+              "to": "B05"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "先接下代班，觉得结束后解释也来得及。",
+          "routes": [
+            {
+              "to": "B06"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S13",
+      "title": "她生活的地方",
+      "chapter": "chapter-3",
+      "backgroundId": "BG13",
+      "stageGroup": "BG13",
+      "ageStage": "university",
+      "layoutTemplate": "duo",
+      "variants": [
+        "reliable",
+        "repair-pending",
+        "repeated-misses"
+      ],
+      "visualBrief": "小梦大学里的旧广播楼外。自行车成排，公告栏贴着社团海报，台阶旁一只猫在纸箱里睡觉。小梦拿着两瓶豆奶，小五背着小旅行包。学校不是高中场景换个标题：楼体、台阶、树木和人流都要不同。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S13｜她生活的地方"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "坐下来，把没说清的事和未来一起谈。",
+          "routes": [
+            {
+              "to": "S14"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "说起以前的回忆，想先过好这几天。",
+          "routes": [
+            {
+              "to": "S14"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "坦白自己越来越确定想留在国外。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S14",
+      "title": "两份工作",
+      "chapter": "chapter-4",
+      "backgroundId": "BG14",
+      "stageGroup": "BG14",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "previous-discussion",
+        "delayed-discussion"
+      ],
+      "visualBrief": "两地视频的漫画分格。小五左侧放着海外硬件团队的录用邮件；小梦右侧桌上有本地电台的实习转正资料。两张日历有不同的截止日期，用两地不同的自然光区分，不展示真实机构商标。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "S14｜两份工作"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "提出有期限的共同城市计划，保留双方现有机会。",
+          "routes": [
+            {
+              "to": "B08"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "承诺一定会团聚，但暂时不给安排。",
+          "routes": [
+            {
+              "to": "B09"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "确认彼此都不愿放弃各自的方向。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B01",
+      "title": "站牌下面",
+      "chapter": "chapter-2",
+      "backgroundId": "BG15",
+      "stageGroup": "BG15",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "公交站，街灯、刚收摊的小吃车、两人手中的饮料。小五在站牌左侧，小梦站右侧，末班车还有几站。此处保持慢节奏，不用车辆即将驶离的倒计时逼迫表白。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B01｜站牌下面"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“不是。我喜欢你，刚才没敢说。”",
+          "routes": [
+            {
+              "to": "S09"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "“嗯。做朋友挺好的。”",
+          "routes": [
+            {
+              "to": "F01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B02",
+      "title": "先别保证永远",
+      "chapter": "chapter-2",
+      "backgroundId": "BG09",
+      "stageGroup": "BG09",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "沿用当前场景，详见 SCENE_RENDERING.md。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B02｜先别保证永远"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "一起商量近期能做到的事。",
+          "routes": [
+            {
+              "to": "S10"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "问她最担心什么，先听完。",
+          "routes": [
+            {
+              "to": "S10"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B03",
+      "title": "别替我说",
+      "chapter": "chapter-2",
+      "backgroundId": "BG09",
+      "stageGroup": "BG09",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "沿用当前场景，详见 SCENE_RENDERING.md。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B03｜别替我说"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "收回替她作决定的话，承认自己想继续。",
+          "routes": [
+            {
+              "to": "B02"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "先抱住她，仍不谈具体问题。",
+          "routes": [
+            {
+              "to": "S10"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "承认自己确实想结束这段刚开始的关系。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B04",
+      "title": "我听见了",
+      "chapter": "chapter-3",
+      "backgroundId": "BG16",
+      "stageGroup": "BG16",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "小五房间的台灯亮着，笔记本屏幕停在节目结束页。手机中的小梦站在广播楼走廊，耳机挂在脖子上。她头发压出一道印，手里还攥着稿纸。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B04｜我听见了"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“我最喜欢你最后没照稿念的那一句。”",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "“先别复盘，你晚饭吃了吗？”",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B05",
+      "title": "不是直播，也一起听",
+      "chapter": "chapter-3",
+      "backgroundId": "BG17",
+      "stageGroup": "BG17",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "视频通话，小五桌上放着午饭，小梦坐宿舍公共自习室靠窗处，电脑上是音频波形。两边各有一副耳机，右侧窗外晾着床单。声音播放是演出设计说明，不要求嵌入真实歌曲。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B05｜不是直播，也一起听"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "停下播放，先听她讲那天发生的事。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "让她当解说，一起听完整段回放。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B06",
+      "title": "已经结束了",
+      "chapter": "chapter-3",
+      "backgroundId": "BG18",
+      "stageGroup": "BG18",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "小五站在便利店外侧，玻璃中有自己的倒影；右上小分格显示小梦床边的台灯和已摘下的耳机。气泡来自电话，不显示她未说出的想法。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B06｜已经结束了"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "承认失约，问能否约一次完整的通话。",
+          "routes": [
+            {
+              "to": "B07"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "说只是一场节目，希望她别计较。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "坦白自己最近也很疲惫，提出结束。",
+          "routes": [
+            {
+              "to": "D02"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B07",
+      "title": "下一次，不是说说而已",
+      "chapter": "chapter-3",
+      "backgroundId": "BG19",
+      "stageGroup": "BG19",
+      "ageStage": "university",
+      "layoutTemplate": "workshop",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "小五学校的项目工作室，几块电路板和工具盒摆在长桌上。手机显示小梦：“我已经回来了，你方便时叫我。”同学站门边，拿着外带饭袋。时间只作场景信息，不设倒计时。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B07｜下一次，不是说说而已"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "请同学带饭，收好工具，按时通话。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "出门吃饭，觉得晚一点不会有关系。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "提前说明今天状态不好，请她决定是否改约。",
+          "routes": [
+            {
+              "to": "S13"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B08",
+      "title": "不是一张机票的事",
+      "chapter": "chapter-4",
+      "backgroundId": "BG14",
+      "stageGroup": "BG14",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "同一视频环境，新增共同查看的城市地图和预算纸。小梦用笔在纸上圈通勤范围，小五在自己的电脑上浏览实际岗位。纸上只画少量数字和线条，不把制作说明放进界面。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B08｜不是一张机票的事"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "保留现职，用三个月认真申请并共同核对结果。",
+          "routes": [
+            {
+              "to": "B10"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "想直接辞职回去，让她看到决心。",
+          "routes": [
+            {
+              "to": "B09"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "算完之后，承认自己不愿承担这次调整。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B09",
+      "title": "“再等等”之后",
+      "chapter": "chapter-4",
+      "backgroundId": "BG14",
+      "stageGroup": "BG14",
+      "ageStage": "university",
+      "layoutTemplate": "video",
+      "variants": [
+        "vague-promise",
+        "impulsive-resignation"
+      ],
+      "visualBrief": "视频中的两人都没有挂断。小梦桌边的茶凉了，小五屏幕上仍有未确认的工作资料。只改变表情与屏幕小道具，不重新加载整幕。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B09｜“再等等”之后"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "停下空泛承诺，提出三个月试行安排。",
+          "routes": [
+            {
+              "to": "B10"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "仍然不愿安排，希望她相信感情就够了。",
+          "routes": [
+            {
+              "to": "D02"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "承认两人对未来的期待不同，决定告别。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B10",
+      "title": "三个月后的晚上",
+      "chapter": "chapter-4",
+      "backgroundId": "BG14",
+      "stageGroup": "BG14",
+      "ageStage": "adult",
+      "layoutTemplate": "video",
+      "variants": [
+        "trust-established",
+        "trust-unresolved"
+      ],
+      "visualBrief": "小五桌上放着新录用通知与租房信息；小梦视频里刚下班，胸牌还没摘。共同日历上的三个月有申请、面试和通话标记。标记图案可随前文履约情况变化，不能凭空画出没有发生的约会。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B10｜三个月后的晚上"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "如实谈待遇和顾虑，愿意接受这次调整。",
+          "routes": [
+            {
+              "to": "D03",
+              "when": {
+                "all": [
+                  {
+                    "fact": "transparency",
+                    "equals": "resolved"
+                  },
+                  {
+                    "fact": "reliability",
+                    "in": [
+                      "fulfilled",
+                      "repaired"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "to": "B11",
+              "otherwise": true
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "担心她失望，把工作说得比实际更好。",
+          "routes": [
+            {
+              "to": "D02"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "坦白自己认真试过，仍更想保留海外工作。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "B11",
+      "title": "先把小事做到",
+      "chapter": "chapter-4",
+      "backgroundId": "BG20",
+      "stageGroup": "BG20",
+      "ageStage": "adult",
+      "layoutTemplate": "duo",
+      "variants": [
+        "agreement",
+        "two-months-later"
+      ],
+      "visualBrief": "小梦工作楼外的雨棚。小五拿着外卖袋，手机里是两个月前约好的日程。小梦从玻璃门里出来，身后同事在收灯架。雨棚、工作楼和高中公交站要明显不同，只用雨声形成回忆呼应。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "B11｜先把小事做到"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "认真执行：守约，有变动时提前重新商量。",
+          "routes": [
+            {
+              "to": "D03"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "不愿继续磨合，坦白提出各走各的。",
+          "routes": [
+            {
+              "to": "D01"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "答应下来，却继续无故爽约、不说明。",
+          "routes": [
+            {
+              "to": "D02"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "F01",
+      "title": "只是朋友的这些年",
+      "chapter": "chapter-2",
+      "backgroundId": "BG21",
+      "stageGroup": "BG21",
+      "ageStage": "university",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "家乡书店旁的小咖啡馆。小梦坐在对面，桌边有她买的二手书。小五的行李寄存在柜台旁。两人不是情侣式并坐；窗外行人自然经过。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "F01｜只是朋友的这些年"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "坦白以前喜欢过她，不要求她改变现在。",
+          "routes": [
+            {
+              "to": "E03"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "问起她现在的生活，不再补那句告白。",
+          "routes": [
+            {
+              "to": "E03"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "D01",
+      "title": "把话说完",
+      "chapter": "epilogue",
+      "backgroundId": "BG22",
+      "stageGroup": "BG22",
+      "ageStage": "derive-from-entry-timeline",
+      "layoutTemplate": "video",
+      "variants": [
+        "high-local-night",
+        "university-remote",
+        "adult-remote",
+        "adult-same-city"
+      ],
+      "visualBrief": "两人各自房间的电话分格；出国前版本都是家乡夜晚，海外版本保留昼夜差，同城版本两边都为晚间。前景物品按阶段替换：试卷／大学课本／工作胸牌。基本构图相同，不能在高考后版本出现毕业工牌。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "D01｜把话说完"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "认真道别，也约定暂时不联系。",
+          "routes": [
+            {
+              "to": "E04"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "问清东西怎么归还，再慢慢说再见。",
+          "routes": [
+            {
+              "to": "E04"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "D02",
+      "title": "没有再约下一次",
+      "chapter": "epilogue",
+      "backgroundId": "BG22",
+      "stageGroup": "BG22",
+      "ageStage": "derive-from-entry-timeline",
+      "layoutTemplate": "video",
+      "variants": [
+        "university-remote",
+        "adult-remote",
+        "adult-same-city"
+      ],
+      "visualBrief": "小五坐在未收拾的桌前，手机靠着杯子；小梦只出现在通话分格中。台灯照着各自一小块地方。重点是两人都没有立刻挂断，禁止用破裂爱心、暴雨等符号替代情绪。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "D02｜没有再约下一次"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "说出具体的歉意，不要求她马上原谅。",
+          "routes": [
+            {
+              "to": "E02"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "承认还舍不得，但接受她的决定。",
+          "routes": [
+            {
+              "to": "E02"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "D03",
+      "title": "回家顺路吗",
+      "chapter": "chapter-4",
+      "backgroundId": "BG23",
+      "stageGroup": "BG23",
+      "ageStage": "adult",
+      "layoutTemplate": "duo",
+      "variants": [
+        "base"
+      ],
+      "visualBrief": "小饭馆靠窗的双人桌。小五工牌收进包里，小梦刚下早班，桌上有两个不同馅的包子、一碗粥。窗外公交车驶过，上班的人流把远景填满。气氛轻松，但真实生活问题仍在。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "D03｜回家顺路吗"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "一起看中间位置的房子，商量作息和家务。",
+          "routes": [
+            {
+              "to": "E01"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "暂时分别住，约好固定见面，不急着同居。",
+          "routes": [
+            {
+              "to": "E01"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "E01",
+      "title": "后来的每一天",
+      "chapter": "epilogue",
+      "backgroundId": "BG24",
+      "stageGroup": "BG24",
+      "ageStage": "adult",
+      "layoutTemplate": "duo",
+      "variants": [
+        "cohabiting",
+        "separate-homes"
+      ],
+      "visualBrief": "小梦家的厨房与小餐桌。窗边有晾着的围裙，桌上放着旧英语笔记。小五在灶台左侧，小梦右侧切水果。一起住版本增加两人的日常用品；分别住版本保留小五刚带来的菜袋，不画共同钥匙。延续手绘卡通风格，以柔和日光、人物距离和浅暖色呈现生活气息，不使用浓重滤镜。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "E01｜后来的每一天"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "“去买你上次想吃的红薯。”",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        },
+        {
+          "id": "B",
+          "label": "“先吃饭。今天不赶时间。”",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        }
+      ],
+      "endingId": "E01"
+    },
+    {
+      "id": "E02",
+      "title": "一起长大的约定",
+      "chapter": "epilogue",
+      "backgroundId": "BG25",
+      "stageGroup": "BG25",
+      "ageStage": "adult",
+      "layoutTemplate": "duo",
+      "variants": [
+        "only-actually-lived-memories"
+      ],
+      "visualBrief": "重新刷过漆的操场看台。小梦坐右侧，手边放着校庆手册，左手有婚戒；小五站在左侧台阶。远景有正在收器材的学生。不要让婚戒突然特写成为惊吓效果：小五此前已从班群知道她结婚。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "E02｜一起长大的约定"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "问她是否还记得当年的约定。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        },
+        {
+          "id": "B",
+          "label": "不再追问过去，认真问她现在过得好不好。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        }
+      ],
+      "endingId": "E02"
+    },
+    {
+      "id": "E03",
+      "title": "那句没说完的话",
+      "chapter": "epilogue",
+      "backgroundId": "BG26",
+      "stageGroup": "BG26",
+      "ageStage": "university",
+      "layoutTemplate": "duo",
+      "variants": [
+        "past-feelings-spoken",
+        "past-feelings-unspoken"
+      ],
+      "visualBrief": "咖啡馆外的街角。书店灯已经亮起，小梦的公交站在右侧，小五要走的路在左侧。路中央是普通斑马线，避免夸张的永远背对背构图。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "E03｜那句没说完的话"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "挥手，说一句普通的再见。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        },
+        {
+          "id": "B",
+          "label": "留在原地一会儿，等车开走。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        }
+      ],
+      "endingId": "E03"
+    },
+    {
+      "id": "E04",
+      "title": "各自的远方",
+      "chapter": "epilogue",
+      "backgroundId": "BG27",
+      "stageGroup": "BG27",
+      "ageStage": "adult",
+      "layoutTemplate": "phone",
+      "variants": [
+        "notebook-returned",
+        "no-return-event"
+      ],
+      "visualBrief": "小五下班后的地铁车厢，窗玻璃映着车内灯。手机里是高中班群转发的一段小梦主持的公开节目。小五穿工作便服，包里有自己的项目笔记；不靠画出新伴侣证明他已经成长。",
+      "scriptSource": {
+        "file": "STORY_SCRIPT.md",
+        "heading": "E04｜各自的远方"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "label": "发去一句祝贺，然后回到自己的晚上。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        },
+        {
+          "id": "B",
+          "label": "把节目听完，不再打扰。",
+          "terminalAction": "play-selected-response-and-common-tail-then-complete-ending"
+        }
+      ],
+      "endingId": "E04"
+    },
+    {
+      "id": "S15",
+      "title": "借你一支笔",
+      "chapter": "chapter-1",
+      "backgroundId": "BG28",
+      "stageGroup": "BG28",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "认真说谢谢，把笔轻轻接好。",
+          "routes": [
+            {
+              "to": "S03"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "压低声音：“这次不咬笔帽。”",
+          "routes": [
+            {
+              "to": "S03"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把自己的橡皮放过去，当作抵押。",
+          "routes": [
+            {
+              "to": "S03"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S16",
+      "title": "要不要吃一点甜的",
+      "chapter": "chapter-1",
+      "backgroundId": "BG29",
+      "stageGroup": "BG29",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "买一杯草莓味，问她要不要也选一杯。",
+          "routes": [
+            {
+              "to": "S17"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "让她先挑，自己再跟着选。",
+          "routes": [
+            {
+              "to": "S17"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "说自己也刚好想吃，给她递一张纸巾。",
+          "routes": [
+            {
+              "to": "S17"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S17",
+      "title": "同一把小勺子",
+      "chapter": "chapter-1",
+      "backgroundId": "BG30",
+      "stageGroup": "BG30",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "接回来，小声说：“你喜欢就好。”",
+          "routes": [
+            {
+              "to": "S06"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "去多拿一把勺子，让她慢慢吃。",
+          "routes": [
+            {
+              "to": "S06"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "问她下周要不要一起试另一个口味。",
+          "routes": [
+            {
+              "to": "S06"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S18",
+      "title": "杯盖里那一点热气",
+      "chapter": "chapter-1",
+      "backgroundId": "BG31",
+      "stageGroup": "BG31",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "把声音放轻，陪她安静坐一会儿。",
+          "routes": [
+            {
+              "to": "S19"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "问她要不要帮忙去找老师请假。",
+          "routes": [
+            {
+              "to": "S19"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把今天的笔记空一份，晚些给她。",
+          "routes": [
+            {
+              "to": "S19"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S19",
+      "title": "这一站，先不叫醒她",
+      "chapter": "chapter-1",
+      "backgroundId": "BG32",
+      "stageGroup": "BG32",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "轻声叫她，等她坐稳再起身。",
+          "routes": [
+            {
+              "to": "S07"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "先问她，要不要一起多坐到下一站。",
+          "routes": [
+            {
+              "to": "S07"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "把书包递给她，记住这一路的安静。",
+          "routes": [
+            {
+              "to": "S07"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    },
+    {
+      "id": "S20",
+      "title": "书页里的那颗星",
+      "chapter": "chapter-2",
+      "backgroundId": "BG33",
+      "stageGroup": "BG33",
+      "ageStage": "high",
+      "layoutTemplate": "duo",
+      "variants": [
+        "gentle",
+        "playful",
+        "quiet"
+      ],
+      "visualBrief": "人物占主体，简笔环境；逐句心理与动作镜头。",
+      "choices": [
+        {
+          "id": "A",
+          "label": "说还想和她一起吃一次午饭。",
+          "routes": [
+            {
+              "to": "S08"
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "label": "把纸星星好好收进书包。",
+          "routes": [
+            {
+              "to": "S08"
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "label": "问她，以后还愿不愿意听自己讲不会的题。",
+          "routes": [
+            {
+              "to": "S08"
+            }
+          ]
+        }
+      ],
+      "endingId": null
+    }
+  ],
+  "runtime": {
+    "version": "2.0.0",
+    "bindings": "src/domain/presentation.mjs",
+    "cover": "public/art/cover.png",
+    "newMomentAtlases": 6,
+    "newMomentPanels": 24,
+    "integratedNewPanels": 23,
+    "font": "public/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "music": [
+      "sunny",
+      "flutter",
+      "tender",
+      "distance",
+      "rain"
+    ]
+  }
+}
