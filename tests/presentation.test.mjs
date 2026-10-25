@@ -23,34 +23,34 @@ test('Planning a page turn preserves the saved line until the illustration is re
  while(state.index<state.queue.length-1)advance(story,state);
  const final=structuredClone(state),next=planAdvance(story,state,'./');
  assert.deepEqual(state,final);assert.equal(next.node.id,'S02');assert.equal(next.crossScene,true);
- assert.equal(next.art.url,'./art/soft/school.png');
+ assert.ok(next.art.url.startsWith('./art/storyboards/'));assert.equal(next.art.storyboard,true);
 });
 
-test('A same-place branch keeps its existing illustration while age variants stay distinct',()=>{
+test('A same-place branch gets a fresh illustrated shot while age variants stay distinct',()=>{
  const state=reach('S09');readToChoice(state);choose(story,state,'A');
  while(state.index<state.queue.length-1)advance(story,state);
  const art=sceneArt(story.nodes[state.nodeId],state),plan=planAdvance(story,state);
- assert.equal(plan.node.id,'B02');assert.equal(plan.art.id,art.id);assert.equal(plan.artChanged,false);assert.equal(plan.crossScene,false);
+ assert.equal(plan.node.id,'B02');assert.notEqual(plan.art.key,art.key);assert.equal(plan.artChanged,true);assert.equal(plan.crossScene,false);
  const variants=['high','university','adult'].map(era=>backgroundArt({backgroundId:'BG22'},{era}));
  assert.equal(new Set(variants.map(v=>v.id)).size,3);assert.equal(new Set(variants.map(v=>v.position)).size,3);
 });
 
 test('Ending art is prepared before its action, and stays through the closing thought and reload',()=>{
  const state=reach('E03',{S08:'C',B01:'B'});readToChoice(state);choose(story,state,'A');
- assert.equal(sceneArt(story.nodes.E03,state).id,'BG26');
+ assert.equal(sceneArt(story.nodes.E03,state).eventId,'BG26');
  while(state.queue[state.index].kind!=='action') {
   const plan=planAdvance(story,state);
-  if(plan.beat?.kind==='action')assert.equal(plan.art.id,'E03-finale');
+  if(plan.beat?.kind==='action')assert.equal(plan.art.eventId,'E03-finale');
   advance(story,state);
  }
- assert.equal(sceneArt(story.nodes.E03,state).id,'E03-finale');advance(story,state);
+ assert.equal(sceneArt(story.nodes.E03,state).eventId,'E03-finale');advance(story,state);
  while(state.queue[state.index].kind!=='thought'){
-  assert.equal(sceneArt(story.nodes.E03,state).id,'E03-finale');advance(story,state);
+  assert.equal(sceneArt(story.nodes.E03,state).eventId,'E03-finale');advance(story,state);
  }
  assert.equal(state.queue[state.index].kind,'thought');
  const restored=validateSave(story,structuredClone(state));
- assert.equal(sceneArt(story.nodes.E03,restored).id,'E03-finale');
- advance(story,state);assert.equal(sceneArt(story.nodes.E03,state).id,'E03-finale');
+ assert.equal(sceneArt(story.nodes.E03,restored).eventId,'E03-finale');
+ advance(story,state);assert.equal(sceneArt(story.nodes.E03,state).eventId,'E03-finale');
 });
 
 test('Invalid imported histories, checkpoints, routes and dialogue fail before replacing progress',()=>{
@@ -72,7 +72,7 @@ test('Both everyday ending choices use their own closing illustration',()=>{
  for(const choice of ['A','B']){
   const state=reach('E01');readToChoice(state);choose(story,state,choice);
   while(state.phase!=='completed')advance(story,state);
-  assert.equal(sceneArt(story.nodes.E01,state).id,`E01-finale-${choice}`);
+  assert.equal(sceneArt(story.nodes.E01,state).eventId,`E01-finale-${choice}`);
   assert.deepEqual(validateSave(story,state),state);
  }
 });
@@ -97,14 +97,14 @@ test('Every reading phase along the five acceptance routes can be exported and r
 test('A choice preserves the final pen pose instead of teleporting the pen back to the desk',()=>{
  const state=reach('S15');readToChoice(state);
  const before=sceneArt(story.nodes.S15,state);
- assert.equal(before.id,'pen-writing');
+ assert.equal(before.eventId,'pen-writing');
  const copy=structuredClone(state),preview=planChoice(story,state,'A');
  assert.deepEqual(state,copy);
- assert.equal(preview.art.id,before.id);
+ assert.equal(preview.art.eventId,before.eventId);
  choose(story,state,'A');
- assert.equal(sceneArt(story.nodes.S15,state).id,before.id);
+ assert.equal(sceneArt(story.nodes.S15,state).eventId,before.eventId);
  const restored=validateSave(story,structuredClone(state));
- assert.equal(sceneArt(story.nodes.S15,restored).id,before.id);
+ assert.equal(sceneArt(story.nodes.S15,restored).eventId,before.eventId);
 });
 
 test('Pen actions, a shared spoon and a shoulder follow their authored order',()=>{
@@ -117,7 +117,7 @@ test('Pen actions, a shared spoon and a shoulder follow their authored order',()
   const state=reach(id),seen=[];
   while(state.phase!=='choosing'){
    const shot=sceneArt(story.nodes[id],state);
-   if(shot.id!==seen.at(-1))seen.push(shot.id);
+   if(shot.eventId!==seen.at(-1))seen.push(shot.eventId);
    assert.equal(shot.boySide,'right');assert.equal(shot.size,'300% 300%');
    advance(story,state);
   }
@@ -129,12 +129,12 @@ test('The airport hug follows a question, agreement, open arms and a step forwar
  const state=reach('S10');readToChoice(state);
  const saved=structuredClone(state),preview=planChoice(story,state,'A');
  assert.deepEqual(state,saved);
- assert.equal(preview.art.id,'airport-breakfast');
+ assert.equal(preview.art.eventId,'airport-breakfast');
  choose(story,state,'A');
  const seen=[];
  while(state.nodeId==='S10'){
   const art=sceneArt(story.nodes.S10,state);
-  if(art.id!==seen.at(-1))seen.push(art.id);
+  if(art.eventId!==seen.at(-1))seen.push(art.eventId);
   advance(story,state);
  }
  assert.deepEqual(seen,['airport-breakfast','airport-open','airport-step','airport-hug','airport-hold','airport-release']);
@@ -145,7 +145,7 @@ test('The airport hug follows a question, agreement, open arms and a step forwar
  for(const choice of ['B','C']){
   const alternate=reach('S10');readToChoice(alternate);choose(story,alternate,choice);
   while(alternate.nodeId==='S10'){
-   assert.ok(!['airport-hug','airport-hold'].includes(sceneArt(story.nodes.S10,alternate).id));
+   assert.ok(!['airport-hug','airport-hold'].includes(sceneArt(story.nodes.S10,alternate).eventId));
    advance(story,alternate);
   }
  }

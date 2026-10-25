@@ -5,4 +5,5 @@ import './styles.css';
 import './immersive.css';
 import './kawaii.css';
 import './sketch.css';
+import './reader.css';
 createApp(App).use(createPinia()).mount('#app');

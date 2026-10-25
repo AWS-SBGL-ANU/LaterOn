@@ -7,7 +7,7 @@ export function prepareArt(url:string){
   image.onerror=()=>{clearTimeout(timer);ready.delete(url);reject(Error('这张插画未能加载。'));};image.src=url;
  });
  ready.set(url,promise);
- // Keep the nine current sketch sheets warm across nearby scenes and branches.
+ // Keep nearby illustration sheets warm without downloading the entire story.
  if(ready.size>12)ready.delete(ready.keys().next().value!);
  return promise;
 }

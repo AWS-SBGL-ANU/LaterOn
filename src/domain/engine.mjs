@@ -1,3 +1,4 @@
+import {upgradeEditorialSave} from './storyRefinements.mjs';
 export const SCHEMA=1;
 export const initialFacts=()=>({transparency:'unresolved',reliability:'untested',plan:false,relationship:'friends',era:'high',city:false,living:'separate',notebookReturned:false});
 export function matches(when,s){
@@ -76,6 +77,7 @@ export function choose(story,s,id){
 }
 export function snapshot(s){return JSON.parse(JSON.stringify({...s,checkpoints:[]}));}
 export function validateSave(story,data){
+ data=upgradeEditorialSave(data);
  validateProgress(story,data);
  if(!Array.isArray(data.checkpoints)||data.checkpoints.length>80)throw Error('存档重选记录无效。');
  for(const checkpoint of data.checkpoints){

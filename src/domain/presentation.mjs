@@ -1,5 +1,6 @@
 import { advance, choose, current, matches } from './engine.mjs';
 import {artStyle} from '../data/artStyle.mjs';
+import storyboard from '../data/storyboards.json' with {type:'json'};
 
 // Nine equal landscape panels per sheet; CSS positions are 0%, 50%, 100%.
 export const tiles = {
@@ -70,8 +71,13 @@ function illustrationArt(node, state, base = '/') {
 }
 
 export function sceneArt(node,state,base='/') {
- const art=illustrationArt(node,state,base);
- return {...art,key:art.id};
+ const pages=storyboard.nodes[node.id];
+ const response=['response','completed'].includes(state.phase);
+ const sequence=response?pages?.responses[state.decisions[node.id]]:pages?.dialogue;
+ const shot=storyboard.shots[sequence?.[current(state)?.id]];
+ const art=shot?{...tileArt(shot.id,shot.sheet,shot.index,base),
+  url:`${base}${storyboard.directory}${shot.sheet}.png`,storyboard:true}:illustrationArt(node,state,base);
+ return {...art,eventId:illustrationArt(node,state,base).id,key:art.id};
 }
 
 // Static scenes preload the finished illustration only.

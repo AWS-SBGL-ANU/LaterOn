@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import {refineStory} from '../src/domain/storyRefinements.mjs';
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(await fs.readFile(new URL('Later_On_Architecture_Package/docs/SCENE_MANIFEST.json',root),'utf8'));
 const script = await fs.readFile(new URL('Later_On_Architecture_Package/docs/STORY_SCRIPT.md',root),'utf8');
@@ -82,5 +83,5 @@ for(const [,id,title,body] of sections){
 }
 if(Object.keys(nodes).length!==manifest.counts.storyNodes)throw Error('Story node count does not match manifest');
 await fs.mkdir(new URL('src/data',root),{recursive:true});
-await fs.writeFile(new URL('src/data/story.json',root),JSON.stringify({version:'2.1.0',nodes},null,2));
+await fs.writeFile(new URL('src/data/story.json',root),JSON.stringify(refineStory({version:'2.1.0',nodes}),null,2));
 console.log(`Compiled ${Object.keys(nodes).length} nodes; ${Object.values(nodes).reduce((n,x)=>n+x.beats.length+x.choices.reduce((a,c)=>a+c.response.length,0)+x.tail.length,0)} dialogue beats.`);

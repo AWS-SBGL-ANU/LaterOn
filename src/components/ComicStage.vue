@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-const props=defineProps<{node:any;facts:any;art:{id:string;key?:string;url:string;position:string;size:string};simple?:boolean;choice?:string}>();
+import { computed,ref,onMounted,onUnmounted } from 'vue';
+const props=defineProps<{node:any;facts:any;art:{id:string;index:number;key?:string;url:string;position:string;size:string};simple?:boolean;choice?:string}>();
+const portraitQuery=window.matchMedia('(orientation: portrait)');
+const portrait=ref(portraitQuery.matches);
+function syncOrientation(){portrait.value=portraitQuery.matches;}
+onMounted(()=>portraitQuery.addEventListener('change',syncOrientation));
+onUnmounted(()=>portraitQuery.removeEventListener('change',syncOrientation));
 const caption=computed(()=>{
  if(props.node.id==='E01')return props.facts.living==='together'?'两个人的日常，慢慢安放。':'今天带来的菜，还放在门边。';
  if(props.node.id==='E04'&&props.facts.notebookReturned)return '那本笔记，已经好好寄回去了。';
@@ -10,7 +15,9 @@ const caption=computed(()=>{
 <template>
  <div class="comic-stage" :class="{'simple-art':simple}" role="img" :aria-label="`${node.title}的粗铅笔淡彩手绘场景`">
   <div v-if="!simple" class="shot-panel" aria-hidden="true">
-   <div class="scene-art" :style="{backgroundImage:`url(${art.url})`,backgroundPosition:art.position,backgroundSize:art.size}"></div>
+   <svg class="scene-picture" viewBox="0 0 1600 900" :preserveAspectRatio="portrait?'xMidYMid meet':'xMidYMid slice'" aria-hidden="true">
+    <svg x="0" y="0" width="1600" height="900" :viewBox="`${art.index%3*1600} ${Math.floor(art.index/3)*900} 1600 900`" overflow="hidden"><image :href="art.url" x="0" y="0" width="4800" height="2700" preserveAspectRatio="none" /></svg>
+   </svg>
   </div>
   <div v-if="simple" class="simple-caption"><span>插画暂未显示</span><p>你可以继续阅读，或重试加载画面。</p></div>
   <div class="scene-corner" aria-hidden="true">✧</div>
