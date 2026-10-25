@@ -26,10 +26,11 @@ test('Planning a page turn preserves the saved line until the illustration is re
  assert.equal(next.art.url,'./art/soft/school.png');
 });
 
-test('A same-place branch dissolves its response without a location transition, while age variants stay distinct',()=>{
+test('A same-place branch keeps its existing illustration while age variants stay distinct',()=>{
  const state=reach('S09');readToChoice(state);choose(story,state,'A');
  while(state.index<state.queue.length-1)advance(story,state);
- const plan=planAdvance(story,state);assert.equal(plan.node.id,'B02');assert.equal(plan.artChanged,true);assert.equal(plan.crossScene,false);
+ const art=sceneArt(story.nodes[state.nodeId],state),plan=planAdvance(story,state);
+ assert.equal(plan.node.id,'B02');assert.equal(plan.art.id,art.id);assert.equal(plan.artChanged,false);assert.equal(plan.crossScene,false);
  const variants=['high','university','adult'].map(era=>backgroundArt({backgroundId:'BG22'},{era}));
  assert.equal(new Set(variants.map(v=>v.id)).size,3);assert.equal(new Set(variants.map(v=>v.position)).size,3);
 });

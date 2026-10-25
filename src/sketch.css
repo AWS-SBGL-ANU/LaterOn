@@ -13,39 +13,11 @@ body {background:#f8f6f0;}
 .reader-meta {color:#8c8478;}
 .stage-frame {border:2px solid #e0dacf;outline:none;border-radius:9px;box-shadow:0 4px 18px #776f5d0a;background:#faf8f2;}
 .comic-stage {background:#faf8f2;border-radius:6px;}
-/* Frame one atlas panel before moving it, so neighbouring cells never appear.
-   Leave room above the drawing for dialogue; camera motion is at most 2.5%. */
+/* Display one finished atlas panel, with room above it for dialogue. */
 .comic-stage>.shot-panel {position:absolute;inset:auto auto 0 10%;width:80%;height:80%;overflow:hidden;}
-.shot-camera,.shot-camera>.scene-art {position:absolute;inset:0;}
-.shot-camera {transform-origin:50% 64%;}
-.puppet-stage {position:absolute;inset:0;width:100%;height:100%;background:#faf8f2;pointer-events:none;}
-.action-moment {font:22px var(--round);fill:#958775;letter-spacing:2px;}
-.camera-closer {animation:sketch-closer 3.6s ease-out both;}
-.camera-approach {animation:sketch-approach 1.7s ease-out both;}
-.camera-settle {animation:sketch-settle 2.8s ease-out both;}
-.sketch-rain {position:absolute;inset:0;width:100%;height:100%;stroke:#8b9da7;stroke-width:2;stroke-linecap:round;opacity:.35;}
-.sketch-rain path {animation:sketch-rainfall 1.6s linear infinite;}
-.cup-steam {position:absolute;width:5%;height:13%;transform:translate(-50%,-95%);stroke:#c1c1b1;stroke-width:2;stroke-linecap:round;}
-.cup-steam path {animation:sketch-steam 3.6s ease-out infinite;opacity:0;}
-.cup-steam path:nth-child(2) {animation-delay:-1.2s;}
-.cup-steam path:nth-child(3) {animation-delay:-2.4s;}
-.pencil-heart {position:absolute;left:47%;top:27%;width:4%;height:auto;stroke:#be998e;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;animation:sketch-heart 2.8s ease-out both;}
-.bus-window-light {position:absolute;left:0;top:26%;width:13%;height:38%;overflow:hidden;opacity:.16;}
-.bus-window-light:before {content:'';position:absolute;inset:-30% -120%;background:linear-gradient(105deg,transparent 30%,#fff9db 43%,#fff9db 52%,transparent 65%);animation:sketch-window 7s linear infinite;}
-.motion-paused *,.motion-paused *:before {animation-play-state:paused!important;}
-.motion-reduced *,.motion-reduced *:before {animation:none!important;}
-.motion-reduced .cup-steam,.motion-reduced .pencil-heart,.motion-reduced .bus-window-light,.motion-reduced .sketch-rain {display:none;}
-.shot-dissolve-enter-active,.shot-dissolve-leave-active {transition:opacity .65s ease;}
-@keyframes sketch-closer {from{transform:scale(1);}to{transform:scale(1.025);}}
-@keyframes sketch-approach {from{transform:translateY(3px) scale(1.006);}to{transform:translateY(0) scale(1.012);}}
-@keyframes sketch-settle {from{transform:scale(1.018);}to{transform:scale(1.006);}}
-@keyframes sketch-rainfall {0%{opacity:0;transform:translate(8px,-45px);}20%,75%{opacity:.7;}100%{opacity:0;transform:translate(-28px,130px);}}
-@keyframes sketch-steam {0%{opacity:0;translate:0 8px;}25%{opacity:.5;}100%{opacity:0;translate:4px -17px;}}
-@keyframes sketch-heart {0%{opacity:0;translate:0 6px;scale:.85;}25%,60%{opacity:.65;}100%{opacity:0;translate:0 -13px;scale:1.05;}}
-@keyframes sketch-window {from{translate:40% 0;}to{translate:-40% 0;}}
-@media(prefers-reduced-motion:reduce) {
- .cup-steam,.pencil-heart,.bus-window-light,.sketch-rain {display:none;}
-}
+.shot-panel>.scene-art {position:absolute;inset:0;}
+/* The game uses static scenes and instant UI changes throughout. */
+*,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important;}
 .scene-top-wash {display:none;}
 .scene-corner {display:none;}
 .in-scene-bubble {--bubble-border:#b7c0b0;--bubble-paper:#fffef8;border-width:1.5px;border-radius:17px 21px 18px 16px;box-shadow:1px 3px 0 #b7c0b01c;color:#665d58;top:3%;padding:11px 19px 9px;gap:5px;}

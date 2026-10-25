@@ -1,5 +1,4 @@
 import { advance, choose, current, matches } from './engine.mjs';
-import { performanceFor } from './choreography.mjs';
 import {artStyle} from '../data/artStyle.mjs';
 
 // Nine equal landscape panels per sheet; CSS positions are 0%, 50%, 100%.
@@ -72,9 +71,11 @@ function illustrationArt(node, state, base = '/') {
 
 export function sceneArt(node,state,base='/') {
  const art=illustrationArt(node,state,base);
- const performance=performanceFor(node,state,art);
- return {...art,performance,key:performance?`${art.id}:${performance.key}`:art.id};
+ return {...art,key:art.id};
 }
+
+// Static scenes preload the finished illustration only.
+export function artDependencies(art) {return [art.url];}
 
 function plan(story, state, next, base) {
  const node = story.nodes[next.nodeId], art = sceneArt(node,next,base);

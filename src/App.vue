@@ -6,8 +6,7 @@ import { useNarrativeStore,story } from './stores/narrativeStore';
 import ComicStage from './components/ComicStage.vue';
 import StoryDialogue from './components/StoryDialogue.vue';
 import { places,chapterNames } from './data/art';
-import { sceneArt,planAdvance,planChoice } from './domain/presentation.mjs';
-import { artDependencies } from './domain/choreography.mjs';
+import { sceneArt,planAdvance,planChoice,artDependencies } from './domain/presentation.mjs';
 import {artStyle} from './data/artStyle.mjs';
 import { prepareArt } from './services/assetManager';
 import { gesture,startGesture,stopGesture,requireGestureRelease } from './services/gestureService';
@@ -15,13 +14,11 @@ import { setSound,setMusicMood,moodFor,unlockAudio,music } from './services/audi
 const baseUrl=import.meta.env.BASE_URL;
 const coverArt={url:`${baseUrl}${artStyle.cover}`,position:'center',size:'contain'};
 const game=useNarrativeStore();const {state,node,beat,error,conflict,canContinue,endings}=storeToRefs(game);
-const screen=ref('cover'),modal=ref(''),transition=ref(false),transitionText=ref(''),artError=ref(''),simpleArt=ref(false),loading=ref(false),toast=ref(''),font=ref(28),reduced=ref(false),sound=ref(true),fullscreen=ref(false),newPrompt=ref(false);
+const screen=ref('cover'),modal=ref(''),artError=ref(''),simpleArt=ref(false),loading=ref(false),toast=ref(''),font=ref(28),reduced=ref(false),sound=ref(true),fullscreen=ref(false),newPrompt=ref(false);
 const dialogue=ref<InstanceType<typeof StoryDialogue>|null>(null);
-const comic=ref<InstanceType<typeof ComicStage>|null>(null);
 const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
-const systemReduced=ref(motionPreference.matches),pageHidden=ref(document.hidden);
+const systemReduced=ref(motionPreference.matches);
 function syncMotionPreference(){systemReduced.value=motionPreference.matches;}
-function syncVisibility(){pageHidden.value=document.hidden;}
 const instantText=computed(()=>reduced.value||systemReduced.value);
 const importInput=ref<HTMLInputElement|null>(null),dialog=ref<HTMLElement|null>(null);
 const endingDescriptions:Record<string,string>={E01:'不必每一天都盛大。一起吃饭、商量明天，就是后来。',E02:'不是没发生。只是现在，不用再补了。',E03:'有些话，说出口与没说出口，会走向不同的后来。',E04:'认真说完再见，然后走进各自的生活。'};
@@ -30,10 +27,10 @@ const chapterIndex=computed(()=>{const c=node.value?.chapter??'chapter-1';return
 const completed=computed(()=>state.value?.phase==='completed');
 const currentArt=computed(()=>state.value?sceneArt(node.value,state.value,baseUrl):null);
 const memoryChoice=computed(()=>node.value?.id==='B11'?state.value?.decisions.B11:state.value?.decisions.S02);
-let lastAction=-Infinity,lastFocus:HTMLElement|null=null,transitionToken=0,toastTimer:any;
+let lastAction=-Infinity,lastFocus:HTMLElement|null=null,toastTimer:any;
 let failedArtAction:'current'|'advance'|'choice'='current',failedChoice='';
 function notify(text:string){toast.value=text;clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.value='',3500);}
-function command(fn:()=>void){if(transition.value||loading.value||performance.now()-lastAction<230)return;lastAction=performance.now();fn();requireGestureRelease();}
+function command(fn:()=>void){if(loading.value||performance.now()-lastAction<230)return;lastAction=performance.now();fn();requireGestureRelease();}
 function prepareScene(art){return Promise.all(artDependencies(art,baseUrl).map(url=>prepareArt(url)));}
 async function reveal(){
  loading.value=true;artError.value='';
@@ -44,8 +41,7 @@ async function resume(){game.resume();if(state.value){setMusicMood(moodFor(node.
 function toggleSound(){sound.value=!sound.value;unlockAudio(sound.value);}
 function newStory(){if(state.value||canContinue.value){newPrompt.value=true;modal.value='new';}else void begin();}
 async function advanceLine(skipArt=false){
- if(modal.value||transition.value||loading.value||artError.value||conflict.value||!state.value)return;
- if(!skipArt&&comic.value&&!comic.value.settleMotion())return;
+ if(modal.value||loading.value||artError.value||conflict.value||!state.value)return;
  const sourceState=state.value;
  const plan=planAdvance(story,state.value,baseUrl);if(!plan)return;
  if(plan.artChanged&&!skipArt){
@@ -53,20 +49,13 @@ async function advanceLine(skipArt=false){
   try{await prepareScene(plan.art);}catch{failedArtAction='advance';artError.value='下一幅插画未能加载。你可以重试，或选择简化画面继续。';return;}finally{loading.value=false;}
  }
  if(state.value!==sourceState||screen.value!=='story'||modal.value)return;
- if(plan.crossScene){
-  const token=++transitionToken;transitionText.value=`${plan.node.time.split('。')[0]}\n${places[plan.node.backgroundId]}`;transition.value=true;requireGestureRelease();
-  await delay(instantText.value?70:480);if(token!==transitionToken)return;
-  if(state.value!==sourceState||screen.value!=='story'){transition.value=false;return;}
-  game.next();simpleArt.value=skipArt;
-  await delay(instantText.value?70:650);if(token===transitionToken)transition.value=false;return;
- }
+
  game.next();if(plan.artChanged)simpleArt.value=skipArt;
 }
 async function retryArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine();else if(action==='choice')await applyChoice(failedChoice);else await reveal();}
 async function continueWithoutArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine(true);else if(action==='choice')await applyChoice(failedChoice,true);else simpleArt.value=true;}
-const delay=(ms:number)=>new Promise(resolve=>setTimeout(resolve,ms));
 async function applyChoice(id:string,skipArt=false){
- if(conflict.value||modal.value||transition.value||loading.value||artError.value||!state.value)return;
+ if(conflict.value||modal.value||loading.value||artError.value||!state.value)return;
  const sourceState=state.value;
  const plan=planChoice(story,state.value,id,baseUrl);if(!plan)return;
  if(plan.artChanged&&!skipArt){
@@ -107,13 +96,13 @@ watch(()=>[state.value?.nodeId,state.value?.phase,state.value?.index],()=>{
   :[planAdvance(story,state.value,baseUrl)];
  for(const url of new Set(plans.filter(Boolean).flatMap(plan=>artDependencies(plan.art,baseUrl))))void prepareArt(url).catch(()=>{});
 });
-onMounted(()=>{try{const v=JSON.parse(localStorage.getItem('hou-lai-ne.settings')||'{}');if([24,28,32].includes(v.font))font.value=v.font;reduced.value=v.reduced===true;if(v.musicVersion===2)sound.value=v.sound!==false;}catch{}document.addEventListener('keydown',keydown);document.addEventListener('fullscreenchange',syncFullscreen);document.addEventListener('visibilitychange',syncVisibility);motionPreference.addEventListener('change',syncMotionPreference);void prepareArt(coverArt.url).catch(()=>{});});
-onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.removeEventListener('fullscreenchange',syncFullscreen);document.removeEventListener('visibilitychange',syncVisibility);motionPreference.removeEventListener('change',syncMotionPreference);clearTimeout(toastTimer);transitionToken++;stopGesture();setSound(false);});
+onMounted(()=>{try{const v=JSON.parse(localStorage.getItem('hou-lai-ne.settings')||'{}');if([24,28,32].includes(v.font))font.value=v.font;reduced.value=v.reduced===true;if(v.musicVersion===2)sound.value=v.sound!==false;}catch{}document.addEventListener('keydown',keydown);document.addEventListener('fullscreenchange',syncFullscreen);motionPreference.addEventListener('change',syncMotionPreference);void prepareArt(coverArt.url).catch(()=>{});});
+onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.removeEventListener('fullscreenchange',syncFullscreen);motionPreference.removeEventListener('change',syncMotionPreference);clearTimeout(toastTimer);stopGesture();setSound(false);});
 </script>
 
 <template>
  <div class="app-shell" :class="{'reduce-motion':instantText,'is-playing':screen==='story'}" :style="{'--dialogue-size':`${font}px`}">
-  <header class="topbar" :inert="!!modal||transition">
+  <header class="topbar" :inert="!!modal">
    <button class="wordmark" aria-label="回到故事封面" @click="screen==='cover'?null:openModal('menu')"><span class="logo-scribble">♡</span> 后来呢<span class="logo-dot">✦</span></button>
    <span class="top-caption">{{ screen==='cover'?'小五与小梦的互动漫画':chapter }}</span>
    <div class="header-actions">
@@ -123,22 +112,22 @@ onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.remove
    </div>
   </header>
 
-  <main v-if="screen==='cover'" class="cute-cover" :inert="!!modal||transition">
+  <main v-if="screen==='cover'" class="cute-cover" :inert="!!modal">
    <div class="cover-stickers" aria-hidden="true"><span>✦</span><span>♡</span><span>✿</span><span>✦</span></div>
    <section class="cute-cover-picture"><h1 class="visually-hidden">后来呢 · 慢慢靠近，慢慢喜欢。</h1><div class="cover-sketch" role="img" aria-label="后来呢，慢慢靠近，慢慢喜欢。标题绘在封面左侧，小梦和小五在右侧的小长椅上分享冰淇淋，周围是暖白留白。" :style="{backgroundImage:`url(${coverArt.url})`,backgroundPosition:coverArt.position,backgroundSize:coverArt.size}"></div><span class="cover-charm">小五 × 小梦 <i>♡</i></span></section>
    <div class="cute-cover-controls"><p class="cover-invitation">一支借来的笔，一口没吃完的冰淇淋。<br><span>那些没说出口的喜欢，后来呢？</span></p><div class="cover-buttons"><button class="button primary" @click="command(newStory)">翻开故事 <span>♡</span></button><button v-if="canContinue" class="button secondary" @click="command(()=>void resume())">接着上次 <span>↝</span></button><button class="button memory-button" @click="openModal('memories')">回忆小盒子 <span>✿</span></button></div><button class="text-button how-to" @click="openModal('help')">第一次见面？怎么玩呀 ♡</button><p class="cover-music-note">♫ 轻点翻开，让配乐陪你慢慢读</p></div>
   </main>
 
-  <main v-else-if="state&&node" class="reader" :inert="!!modal||transition">
+  <main v-else-if="state&&node" class="reader" :inert="!!modal">
    <div class="reader-heading"><div class="chapter-tag"><span class="eyebrow">{{ chapter }}</span><h1>{{ completed?'故事，先写到这里。':node.title }}</h1></div><div class="reader-meta"><span class="location-dot"></span>{{ places[node.backgroundId] }}<span class="chapter-markers" aria-label="章节进度"><i v-for="n in 5" :key="n" :class="{active:n<=chapterIndex}"></i></span></div></div>
    <div class="stage-slot"><div class="stage-frame">
-    <ComicStage ref="comic" :node="node" :facts="state.facts" :art="currentArt" :simple="simpleArt" :choice="memoryChoice" :paused="!!modal||transition||loading||!!artError||conflict||pageHidden" :reduced="instantText" />
+    <ComicStage :node="node" :facts="state.facts" :art="currentArt" :simple="simpleArt" :choice="memoryChoice" />
     <div class="scene-top-wash" aria-hidden="true"></div>
     <span class="paper-binding" aria-hidden="true"></span>
     <div class="stage-stamp">{{ node.time.split('。')[0] }}</div>
-    <button v-if="!completed&&state.phase!=='choosing'&&beat" class="scene-advance-hit" aria-label="点击画面，显示整句或继续对白" :disabled="transition||loading||!!artError||conflict" @click.stop="advance"></button>
-    <StoryDialogue v-if="!completed&&state.phase!=='choosing'&&beat" ref="dialogue" :beat="beat" :boy-side="currentArt.boySide" :line-key="`${state.nodeId}:${state.phase}:${state.index}`" :paused="!!modal||transition||loading||!!artError||conflict" :instant="instantText" @interact="advance" @advance="advanceLine()" />
-    <Transition name="choices-rise"><section v-if="!completed&&state.phase==='choosing'" class="scene-choices" aria-label="选择你的回应"><div class="choice-heading"><span>这一刻，你想怎么说？</span><small>慢慢想，不着急 ♡</small></div><div class="choices"><button v-for="(choice,index) in node.choices" :key="`${node.id}-${choice.id}`" class="choice-button" :disabled="loading||transition||conflict||!!artError" @click.stop="choose(choice.id)"><span class="choice-letter">{{ String(index+1).padStart(2,'0') }}</span><span>{{ choice.label }}</span><span class="choice-arrow">↗</span></button></div></section></Transition>
+    <button v-if="!completed&&state.phase!=='choosing'&&beat" class="scene-advance-hit" aria-label="点击画面，显示整句或继续对白" :disabled="loading||!!artError||conflict" @click.stop="advance"></button>
+    <StoryDialogue v-if="!completed&&state.phase!=='choosing'&&beat" ref="dialogue" :beat="beat" :boy-side="currentArt.boySide" :line-key="`${state.nodeId}:${state.phase}:${state.index}`" :paused="!!modal||loading||!!artError||conflict" :instant="instantText" @interact="advance" @advance="advanceLine()" />
+    <section v-if="!completed&&state.phase==='choosing'" class="scene-choices" aria-label="选择你的回应"><div class="choice-heading"><span>这一刻，你想怎么说？</span><small>慢慢想，不着急 ♡</small></div><div class="choices"><button v-for="(choice,index) in node.choices" :key="`${node.id}-${choice.id}`" class="choice-button" :disabled="loading||conflict||!!artError" @click.stop="choose(choice.id)"><span class="choice-letter">{{ String(index+1).padStart(2,'0') }}</span><span>{{ choice.label }}</span><span class="choice-arrow">↗</span></button></div></section>
     <section v-if="completed" class="ending-card scene-ending"><span class="eyebrow">这一段后来 · 已读完</span><h2>{{ node.title }}</h2><p>{{ endingDescriptions[node.id] }}</p><div><button class="button primary" @click="openModal('journey')">回看这一路 <span>↗</span></button><button class="button secondary" @click="openModal('new')">再写一种后来 <span>→</span></button><button class="text-button" @click="goCover">回到封面</button></div></section>
     <div v-if="loading" class="loading-pill" role="status"><span class="spinner"></span> 正在翻到下一页…</div>
     <div v-if="artError" class="asset-error" role="alert"><p>{{ artError }}</p><button class="button primary" @click="retryArt">重试插画</button><button class="button secondary" @click="continueWithoutArt">先用简化画面继续</button></div>
@@ -146,13 +135,13 @@ onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.remove
    <footer class="reader-toolbar"><span class="save-indicator" :class="{warning:error}"><i></i>{{ error?'进度保留在当前页面':'进度自动保存' }}</span><div><button class="text-button" @click="openModal('backlog')">▤ 对白记录</button><button class="text-button" @click="openModal('journey')">↶ 这一路</button><button class="text-button" @click="openModal('menu')">☰ 暂停</button></div></footer>
   </main>
 
-  <footer v-if="screen==='cover'" class="site-footer" :inert="!!modal||transition"><span>后来呢 · 小小的选择，长长的故事。</span><button class="text-button" @click="openModal('credits')">关于这本故事</button></footer>
+  <footer v-if="screen==='cover'" class="site-footer" :inert="!!modal"><span>后来呢 · 小小的选择，长长的故事。</span><button class="text-button" @click="openModal('credits')">关于这本故事</button></footer>
   <div v-if="error" class="save-error" role="alert"><span>{{ error }}</span><button v-if="conflict" @click="resume">重新载入</button><button v-if="conflict" @click="game.fork()">另存进度</button><button v-if="state" @click="exportSave">导出存档</button></div>
   <div v-if="toast" class="toast" role="status">{{ toast }}</div>
 
   <div v-if="modal" class="modal-backdrop" @click.self="closeModal"><section ref="dialog" class="modal" :class="{'wide-modal':['backlog','journey'].includes(modal)}" role="dialog" aria-modal="true" :aria-label="{settings:'阅读设置',help:'怎么玩',menu:'暂停',memories:'已读回忆',new:'新的故事',journey:'这一路',backlog:'对白记录',credits:'关于故事'}[modal]">
    <button class="modal-close icon-button" aria-label="关闭窗口，回到原来的进度" @click="closeModal">×</button>
-   <template v-if="modal==='settings'"><span class="eyebrow">让阅读舒服一点</span><h2>按你的节奏。</h2><p class="font-sample">后来呢，慢慢喜欢你 ♡</p><div class="setting-row"><div><strong>对白字号</strong><p>圆圆的字，慢慢地说。</p></div><div class="segmented"><button v-for="size in [24,28,32]" :key="size" :class="{selected:font===size}" @click="font=size">{{ size }}</button></div></div><div class="setting-row"><div><strong>减少动态效果</strong><p>直接显示整句，缩短转场。</p></div><button class="toggle" role="switch" :aria-checked="reduced" :class="{on:reduced}" aria-label="减少动态效果" @click="reduced=!reduced"><i></i></button></div><div class="setting-row"><div><strong>让音乐陪着你</strong><small>{{ music.message || (music.playing ? `正在听 · ${music.title}` : `翻开故事后开始播放`) }}</small><p>轻快、心动、温柔、想念与失落。</p></div><button class="toggle" role="switch" :aria-checked="sound" :class="{on:sound}" aria-label="剧情配乐" @click="toggleSound"><i></i></button></div><div class="setting-row gesture-setting"><div><strong>用手势翻页</strong><p>食指移动，拇指与食指捏合点击。</p><small>{{ gesture.message }}</small></div><button class="button secondary small-button" :disabled="gesture.loading" @click="gesture.enabled?stopGesture():startGesture()">{{ gesture.loading?'正在开启…':gesture.enabled?'关闭手势':'开启手势' }}</button></div><p class="privacy-note">摄像头只在你主动开启后使用，画面在本机识别，不录制、不上传。鼠标始终可用。</p><button class="button primary full-button" @click="closeModal">回到故事 <span>↗</span></button></template>
+   <template v-if="modal==='settings'"><span class="eyebrow">让阅读舒服一点</span><h2>按你的节奏。</h2><p class="font-sample">后来呢，慢慢喜欢你 ♡</p><div class="setting-row"><div><strong>对白字号</strong><p>圆圆的字，慢慢地说。</p></div><div class="segmented"><button v-for="size in [24,28,32]" :key="size" :class="{selected:font===size}" @click="font=size">{{ size }}</button></div></div><div class="setting-row"><div><strong>直接显示整句</strong><p>关闭对白逐字显示。场景始终为静态图片。</p></div><button class="toggle" role="switch" :aria-checked="reduced" :class="{on:reduced}" aria-label="直接显示整句" @click="reduced=!reduced"><i></i></button></div><div class="setting-row"><div><strong>让音乐陪着你</strong><small>{{ music.message || (music.playing ? `正在听 · ${music.title}` : `翻开故事后开始播放`) }}</small><p>轻快、心动、温柔、想念与失落。</p></div><button class="toggle" role="switch" :aria-checked="sound" :class="{on:sound}" aria-label="剧情配乐" @click="toggleSound"><i></i></button></div><div class="setting-row gesture-setting"><div><strong>用手势翻页</strong><p>食指移动，拇指与食指捏合点击。</p><small>{{ gesture.message }}</small></div><button class="button secondary small-button" :disabled="gesture.loading" @click="gesture.enabled?stopGesture():startGesture()">{{ gesture.loading?'正在开启…':gesture.enabled?'关闭手势':'开启手势' }}</button></div><p class="privacy-note">摄像头只在你主动开启后使用，画面在本机识别，不录制、不上传。鼠标始终可用。</p><button class="button primary full-button" @click="closeModal">回到故事 <span>↗</span></button></template>
    <template v-else-if="modal==='help'"><span class="eyebrow">不用着急</span><h2>一句，一句地读。</h2><ol class="help-list"><li><strong>头顶的气泡，会慢慢说完。</strong><p>点击可显示整句，再点击继续。空格或 Enter 也可以。</p></li><li><strong>在画面下方，选你想说的话。</strong><p>没有倒计时，也没有好感分数。</p></li><li><strong>随时回来，接着读。</strong><p>进度自动保存；设置里可调字号、关闭逐字效果或开启手势。</p></li></ol><button class="button primary full-button" @click="closeModal">知道了 <span>↗</span></button></template>
    <template v-else-if="modal==='menu'"><span class="eyebrow">故事会等你</span><h2>歇一会儿。</h2><div class="menu-list"><button class="button primary" @click="closeModal">继续阅读 <span>→</span></button><button class="button secondary" @click="modal='settings'">阅读设置</button><button class="button secondary" @click="exportSave">导出当前存档</button><button class="button secondary" @click="importInput?.click()">导入存档</button><button class="text-button" @click="goCover">回到封面</button></div></template>
    <template v-else-if="modal==='new'"><span class="eyebrow">另一种可能</span><h2>从第一句话开始？</h2><p class="modal-description">这次会开启独立的新进度。已经读完的结局仍会保留。</p><p v-if="state" class="muted">想留住现在这一刻，可以先导出存档。</p><div class="menu-list"><button class="button primary" @click="()=>{closeModal();void begin();}">开始新的故事 <span>↗</span></button><button v-if="state" class="button secondary" @click="exportSave">先导出当前存档</button><button class="text-button" @click="closeModal">先不翻篇</button></div></template>
@@ -162,7 +151,6 @@ onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.remove
    <template v-else><span class="eyebrow">关于这本故事</span><h2>后来呢。</h2><p class="modal-description">小五与小梦，从校园到成年，学习怎样表达、怎样守约，也学习怎样告别。</p><p class="modal-description">这是一段由你选择回应的 Q 版手绘互动漫画。故事包含四种结局，选择没有分数，也不必每一次都完美。</p><p class="muted">插画由 AI 辅助生成。故事与制作方向由项目剧本和已确认的美术规范确定。手势识别使用 MediaPipe。</p></template>
   </section></div>
   <input ref="importInput" class="visually-hidden" type="file" accept=".json,application/json" tabindex="-1" aria-label="选择要导入的存档" @change="importSave">
-  <Transition name="fade"><div v-if="transition" class="transition-screen" role="status"><span>后来呢</span><p>{{ transitionText }}</p><i></i></div></Transition>
   <div v-if="gesture.enabled&&gesture.tracked" class="gesture-cursor" :class="{pinched:gesture.pinched}" :style="{left:`${gesture.x}px`,top:`${gesture.y}px`}" aria-hidden="true"><i></i></div>
   <div v-if="gesture.enabled&&!gesture.tracked" class="tracking-status" role="status">把手放进摄像头画面 · 鼠标仍可操作</div>
  </div>
