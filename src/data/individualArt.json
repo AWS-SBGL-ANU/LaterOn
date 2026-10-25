@@ -1,0 +1,2060 @@
+{
+  "S01-dialogue-0": {
+    "file": "crayon-S01-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-dialogue-1": {
+    "file": "crayon-S01-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-dialogue-2": {
+    "file": "crayon-S01-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-dialogue-3": {
+    "file": "crayon-S01-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-A-0": {
+    "file": "crayon-S01-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-A-1": {
+    "file": "crayon-S01-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-C-0": {
+    "file": "crayon-S01-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-C-1": {
+    "file": "crayon-S01-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-A-2": {
+    "file": "crayon-S01-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-B-0": {
+    "file": "crayon-S01-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-B-1": {
+    "file": "crayon-S01-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S01-B-2": {
+    "file": "crayon-S01-B-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-0": {
+    "file": "crayon-S02-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-1": {
+    "file": "crayon-S02-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-2": {
+    "file": "crayon-S02-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-3": {
+    "file": "crayon-S02-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-4": {
+    "file": "crayon-S02-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-dialogue-5": {
+    "file": "crayon-S02-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-A-0": {
+    "file": "crayon-S02-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-B-0": {
+    "file": "crayon-S02-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-A-1": {
+    "file": "crayon-S02-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-B-1": {
+    "file": "crayon-S02-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-B-2": {
+    "file": "crayon-S02-B-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-C-0": {
+    "file": "crayon-S02-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S02-C-1": {
+    "file": "crayon-S02-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-0": {
+    "file": "crayon-S15-dialogue-0.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-1": {
+    "file": "crayon-S15-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-2": {
+    "file": "crayon-S15-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-3": {
+    "file": "crayon-S15-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-4": {
+    "file": "crayon-S15-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-5": {
+    "file": "crayon-S15-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-6": {
+    "file": "crayon-S15-dialogue-6.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-7": {
+    "file": "crayon-S15-dialogue-7.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-8": {
+    "file": "crayon-S15-dialogue-8.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-9": {
+    "file": "crayon-S15-dialogue-9.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-10": {
+    "file": "crayon-S15-dialogue-10.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-dialogue-11": {
+    "file": "crayon-S15-dialogue-11.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-A-0": {
+    "file": "crayon-S15-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-B-0": {
+    "file": "crayon-S15-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S15-C-0": {
+    "file": "crayon-S15-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-dialogue-0": {
+    "file": "crayon-S03-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-dialogue-1": {
+    "file": "crayon-S03-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-dialogue-2": {
+    "file": "crayon-S03-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-dialogue-3": {
+    "file": "crayon-S03-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-A-0": {
+    "file": "crayon-S03-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-A-1": {
+    "file": "crayon-S03-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-B-0": {
+    "file": "crayon-S03-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-B-1": {
+    "file": "crayon-S03-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-C-0": {
+    "file": "crayon-S03-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S03-C-1": {
+    "file": "crayon-S03-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-dialogue-0": {
+    "file": "crayon-S04-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-dialogue-1": {
+    "file": "crayon-S04-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-dialogue-2": {
+    "file": "crayon-S04-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-A-0": {
+    "file": "crayon-S04-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-A-1": {
+    "file": "crayon-S04-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-B-0": {
+    "file": "crayon-S04-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-B-1": {
+    "file": "crayon-S04-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-C-0": {
+    "file": "crayon-S04-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S04-C-1": {
+    "file": "crayon-S04-C-1.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-0": {
+    "file": "crayon-S05-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-1": {
+    "file": "crayon-S05-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-2": {
+    "file": "crayon-S05-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-3": {
+    "file": "crayon-S05-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-4": {
+    "file": "crayon-S05-dialogue-4.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-dialogue-5": {
+    "file": "crayon-S05-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-A-0": {
+    "file": "crayon-S05-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-A-1": {
+    "file": "crayon-S05-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-A-2": {
+    "file": "crayon-S05-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-B-0": {
+    "file": "crayon-S05-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-B-1": {
+    "file": "crayon-S05-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-C-0": {
+    "file": "crayon-S05-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S05-C-1": {
+    "file": "crayon-S05-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-dialogue-0": {
+    "file": "crayon-S16-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-dialogue-1": {
+    "file": "crayon-S16-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-dialogue-2": {
+    "file": "crayon-S16-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-dialogue-3": {
+    "file": "crayon-S16-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-dialogue-4": {
+    "file": "crayon-S16-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-A-0": {
+    "file": "crayon-S16-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-B-0": {
+    "file": "crayon-S16-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-B-1": {
+    "file": "crayon-S16-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-C-0": {
+    "file": "crayon-S16-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S16-C-1": {
+    "file": "crayon-S16-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-0": {
+    "file": "crayon-S17-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-1": {
+    "file": "crayon-S17-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-2": {
+    "file": "crayon-S17-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-3": {
+    "file": "crayon-S17-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-4": {
+    "file": "crayon-S17-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-5": {
+    "file": "crayon-S17-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-6": {
+    "file": "crayon-S17-dialogue-6.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-7": {
+    "file": "crayon-S17-dialogue-7.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-dialogue-8": {
+    "file": "crayon-S17-dialogue-8.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-A-0": {
+    "file": "crayon-S17-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-A-1": {
+    "file": "crayon-S17-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-B-0": {
+    "file": "crayon-S17-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-C-0": {
+    "file": "crayon-S17-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S17-C-1": {
+    "file": "crayon-S17-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-dialogue-0": {
+    "file": "crayon-S06-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-dialogue-1": {
+    "file": "crayon-S06-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-dialogue-2": {
+    "file": "crayon-S06-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-A-0": {
+    "file": "crayon-S06-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-dialogue-3": {
+    "file": "crayon-S06-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-A-1": {
+    "file": "crayon-S06-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-B-0": {
+    "file": "crayon-S06-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-B-1": {
+    "file": "crayon-S06-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-C-0": {
+    "file": "crayon-S06-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S06-C-1": {
+    "file": "crayon-S06-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-1": {
+    "file": "crayon-S18-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-2": {
+    "file": "crayon-S18-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-4": {
+    "file": "crayon-S18-dialogue-4.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-5": {
+    "file": "crayon-S18-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-A-0": {
+    "file": "crayon-S18-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-B-0": {
+    "file": "crayon-S18-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-C-0": {
+    "file": "crayon-S18-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-0": {
+    "file": "crayon-S18-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S18-dialogue-3": {
+    "file": "crayon-S18-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-dialogue-0": {
+    "file": "crayon-S19-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-dialogue-1": {
+    "file": "crayon-S19-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-dialogue-2": {
+    "file": "crayon-S19-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-dialogue-4": {
+    "file": "crayon-S19-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-A-0": {
+    "file": "crayon-S19-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-B-0": {
+    "file": "crayon-S19-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-dialogue-3": {
+    "file": "crayon-S19-dialogue-3.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-A-1": {
+    "file": "crayon-S19-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S19-C-0": {
+    "file": "crayon-S19-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-dialogue-0": {
+    "file": "crayon-S07-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-dialogue-1": {
+    "file": "crayon-S07-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-dialogue-2": {
+    "file": "crayon-S07-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-A-0": {
+    "file": "crayon-S07-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-A-1": {
+    "file": "crayon-S07-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-B-0": {
+    "file": "crayon-S07-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-B-1": {
+    "file": "crayon-S07-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-C-0": {
+    "file": "crayon-S07-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S07-C-1": {
+    "file": "crayon-S07-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-dialogue-1": {
+    "file": "crayon-S20-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-dialogue-2": {
+    "file": "crayon-S20-dialogue-2.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-dialogue-0": {
+    "file": "crayon-S20-dialogue-0.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-dialogue-3": {
+    "file": "crayon-S20-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-dialogue-4": {
+    "file": "crayon-S20-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-A-0": {
+    "file": "crayon-S20-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-B-0": {
+    "file": "crayon-S20-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S20-C-0": {
+    "file": "crayon-S20-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-0": {
+    "file": "crayon-S08-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-1": {
+    "file": "crayon-S08-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-2": {
+    "file": "crayon-S08-dialogue-2.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-3": {
+    "file": "crayon-S08-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-4": {
+    "file": "crayon-S08-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-dialogue-5": {
+    "file": "crayon-S08-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-A-0": {
+    "file": "crayon-S08-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-A-1": {
+    "file": "crayon-S08-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-A-2": {
+    "file": "crayon-S08-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-A-3": {
+    "file": "crayon-S08-A-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-B-0": {
+    "file": "crayon-S08-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-B-1": {
+    "file": "crayon-S08-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-C-0": {
+    "file": "crayon-S08-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S08-C-1": {
+    "file": "crayon-S08-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-0": {
+    "file": "crayon-S09-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-1": {
+    "file": "crayon-S09-dialogue-1.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-2": {
+    "file": "crayon-S09-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-3": {
+    "file": "crayon-S09-dialogue-3.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-4": {
+    "file": "crayon-S09-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-5": {
+    "file": "crayon-S09-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-dialogue-6": {
+    "file": "crayon-S09-dialogue-6.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-A-0": {
+    "file": "crayon-S09-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-A-1": {
+    "file": "crayon-S09-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-A-2": {
+    "file": "crayon-S09-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-A-3": {
+    "file": "crayon-S09-A-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-B-0": {
+    "file": "crayon-S09-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-B-1": {
+    "file": "crayon-S09-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-C-0": {
+    "file": "crayon-S09-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S09-C-1": {
+    "file": "crayon-S09-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-0": {
+    "file": "crayon-S10-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-1": {
+    "file": "crayon-S10-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-2": {
+    "file": "crayon-S10-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-3": {
+    "file": "crayon-S10-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-4": {
+    "file": "crayon-S10-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-0": {
+    "file": "crayon-S10-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-1": {
+    "file": "crayon-S10-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-2": {
+    "file": "crayon-S10-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-dialogue-5": {
+    "file": "crayon-S10-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-3": {
+    "file": "crayon-S10-A-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-4": {
+    "file": "crayon-S10-A-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-5": {
+    "file": "crayon-S10-A-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-6": {
+    "file": "crayon-S10-A-6.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-A-7": {
+    "file": "crayon-S10-A-7.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-B-0": {
+    "file": "crayon-S10-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-B-1": {
+    "file": "crayon-S10-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-B-2": {
+    "file": "crayon-S10-B-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-C-0": {
+    "file": "crayon-S10-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S10-C-1": {
+    "file": "crayon-S10-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-dialogue-0": {
+    "file": "crayon-S11-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-dialogue-2": {
+    "file": "crayon-S11-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-dialogue-3": {
+    "file": "crayon-S11-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-A-0": {
+    "file": "crayon-S11-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-dialogue-1": {
+    "file": "crayon-S11-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-A-1": {
+    "file": "crayon-S11-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-B-0": {
+    "file": "crayon-S11-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-B-1": {
+    "file": "crayon-S11-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-C-0": {
+    "file": "crayon-S11-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S11-C-1": {
+    "file": "crayon-S11-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-dialogue-0": {
+    "file": "crayon-S12-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-dialogue-1": {
+    "file": "crayon-S12-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-dialogue-2": {
+    "file": "crayon-S12-dialogue-2.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-A-0": {
+    "file": "crayon-S12-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-B-0": {
+    "file": "crayon-S12-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-B-1": {
+    "file": "crayon-S12-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-C-0": {
+    "file": "crayon-S12-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S12-C-1": {
+    "file": "crayon-S12-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-0": {
+    "file": "crayon-S13-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-1": {
+    "file": "crayon-S13-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-2": {
+    "file": "crayon-S13-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-3": {
+    "file": "crayon-S13-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-4": {
+    "file": "crayon-S13-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-5": {
+    "file": "crayon-S13-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-dialogue-6": {
+    "file": "crayon-S13-dialogue-6.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-A-0": {
+    "file": "crayon-S13-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-A-1": {
+    "file": "crayon-S13-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-A-2": {
+    "file": "crayon-S13-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-A-3": {
+    "file": "crayon-S13-A-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-B-0": {
+    "file": "crayon-S13-B-0.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-B-1": {
+    "file": "crayon-S13-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-C-0": {
+    "file": "crayon-S13-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S13-C-1": {
+    "file": "crayon-S13-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-0": {
+    "file": "crayon-S14-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-1": {
+    "file": "crayon-S14-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-2": {
+    "file": "crayon-S14-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-3": {
+    "file": "crayon-S14-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-4": {
+    "file": "crayon-S14-dialogue-4.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-dialogue-5": {
+    "file": "crayon-S14-dialogue-5.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-A-0": {
+    "file": "crayon-S14-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-A-1": {
+    "file": "crayon-S14-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-B-0": {
+    "file": "crayon-S14-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-B-1": {
+    "file": "crayon-S14-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-C-0": {
+    "file": "crayon-S14-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "S14-C-1": {
+    "file": "crayon-S14-C-1.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-dialogue-0": {
+    "file": "crayon-B01-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-dialogue-1": {
+    "file": "crayon-B01-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-dialogue-2": {
+    "file": "crayon-B01-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-A-0": {
+    "file": "crayon-B01-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-A-1": {
+    "file": "crayon-B01-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-A-2": {
+    "file": "crayon-B01-A-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-B-0": {
+    "file": "crayon-B01-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B01-B-1": {
+    "file": "crayon-B01-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-dialogue-0": {
+    "file": "crayon-B02-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-dialogue-1": {
+    "file": "crayon-B02-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-A-0": {
+    "file": "crayon-B02-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-A-1": {
+    "file": "crayon-B02-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-B-0": {
+    "file": "crayon-B02-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-dialogue-2": {
+    "file": "crayon-B02-dialogue-2.png",
+    "width": 1672,
+    "height": 940,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B02-B-1": {
+    "file": "crayon-B02-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-dialogue-0": {
+    "file": "crayon-B03-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-dialogue-1": {
+    "file": "crayon-B03-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-dialogue-2": {
+    "file": "crayon-B03-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-A-0": {
+    "file": "crayon-B03-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-B-0": {
+    "file": "crayon-B03-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-B-1": {
+    "file": "crayon-B03-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B03-C-0": {
+    "file": "crayon-B03-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-dialogue-0": {
+    "file": "crayon-B04-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-dialogue-1": {
+    "file": "crayon-B04-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-dialogue-2": {
+    "file": "crayon-B04-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-A-0": {
+    "file": "crayon-B04-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-A-1": {
+    "file": "crayon-B04-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-B-0": {
+    "file": "crayon-B04-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B04-B-1": {
+    "file": "crayon-B04-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-dialogue-2": {
+    "file": "crayon-B05-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-B-0": {
+    "file": "crayon-B05-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-dialogue-0": {
+    "file": "crayon-B05-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-dialogue-1": {
+    "file": "crayon-B05-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-A-0": {
+    "file": "crayon-B05-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-A-1": {
+    "file": "crayon-B05-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-dialogue-0": {
+    "file": "crayon-B06-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-dialogue-1": {
+    "file": "crayon-B06-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-dialogue-2": {
+    "file": "crayon-B06-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-dialogue-3": {
+    "file": "crayon-B06-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-A-0": {
+    "file": "crayon-B06-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B05-B-1": {
+    "file": "crayon-B05-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-A-1": {
+    "file": "crayon-B06-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-B-0": {
+    "file": "crayon-B06-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-B-1": {
+    "file": "crayon-B06-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-C-0": {
+    "file": "crayon-B06-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B06-C-1": {
+    "file": "crayon-B06-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-dialogue-1": {
+    "file": "crayon-B07-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-dialogue-2": {
+    "file": "crayon-B07-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-A-0": {
+    "file": "crayon-B07-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-A-1": {
+    "file": "crayon-B07-A-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-dialogue-0": {
+    "file": "crayon-B07-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-C-1": {
+    "file": "crayon-B07-C-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-B-0": {
+    "file": "crayon-B07-B-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-C-0": {
+    "file": "crayon-B07-C-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B07-B-1": {
+    "file": "crayon-B07-B-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B08-dialogue-1": {
+    "file": "crayon-B08-dialogue-1.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B08-dialogue-2": {
+    "file": "crayon-B08-dialogue-2.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B08-dialogue-3": {
+    "file": "crayon-B08-dialogue-3.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B08-A-0": {
+    "file": "crayon-B08-A-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  },
+  "B08-dialogue-0": {
+    "file": "crayon-B08-dialogue-0.png",
+    "width": 1672,
+    "height": 941,
+    "styleId": "crayon-master-20261025",
+    "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a"
+  }
+}

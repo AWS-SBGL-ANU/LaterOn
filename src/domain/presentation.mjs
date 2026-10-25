@@ -1,6 +1,16 @@
 import { advance, choose, current, matches } from './engine.mjs';
 import {artStyle} from '../data/artStyle.mjs';
 import storyboard from '../data/storyboards.json' with {type:'json'};
+import individualArt from '../data/individualArt.json' with {type:'json'};
+
+// Response beat IDs repeat between choices. Include the choice in every key
+// so each independent replacement appears in its own branch.
+const storyboardBeatIndex = new Map();
+for (const shot of Object.values(storyboard.shots)) {
+ for (const beatId of shot.beats) {
+  storyboardBeatIndex.set(`${shot.nodeId}:${shot.phase}:${beatId}`, shot);
+ }
+}
 
 // Nine equal landscape panels per sheet; CSS positions are 0%, 50%, 100%.
 export const tiles = {
@@ -74,10 +84,16 @@ export function sceneArt(node,state,base='/') {
  const pages=storyboard.nodes[node.id];
  const response=['response','completed'].includes(state.phase);
  const sequence=response?pages?.responses[state.decisions[node.id]]:pages?.dialogue;
- const shot=storyboard.shots[sequence?.[current(state)?.id]];
+ const phase=response?state.decisions[node.id]:'dialogue';
+ const shot=storyboardBeatIndex.get(`${node.id}:${phase}:${current(state)?.id}`)
+  ??storyboard.shots[sequence?.[current(state)?.id]];
  const art=shot?{...tileArt(shot.id,shot.sheet,shot.index,base),
   url:`${base}${storyboard.directory}${shot.sheet}.png`,storyboard:true}:illustrationArt(node,state,base);
- return {...art,eventId:illustrationArt(node,state,base).id,key:art.id};
+ const individual = individualArt[art.id];
+ return {...art,...(individual ? {
+  url:`${base}art/individual/${individual.file}`,individual:true,
+  width:individual.width,height:individual.height,index:0,styleId:individual.styleId??art.styleId
+ } : {}),eventId:illustrationArt(node,state,base).id,key:art.id};
 }
 
 // Static scenes preload the finished illustration only.

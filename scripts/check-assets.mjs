@@ -7,10 +7,15 @@ for(const path of ['public/models/hand_landmarker.task','public/mediapipe/hand-t
 const story=JSON.parse(await fs.readFile('src/data/story.json','utf8'));
 const boards=JSON.parse(await fs.readFile('src/data/storyboards.json','utf8'));
 if(Object.keys(boards.nodes).length!==Object.keys(story.nodes).length)throw Error('Incomplete full-story illustration coverage');
+let smallestShotWidth=Infinity,smallestShotHeight=Infinity;
 for(const sheet of boards.sheets){
  const path=`public/${boards.directory}${sheet}.png`,data=await fs.readFile(path);
  if(data.toString('hex',0,8)!=='89504e470d0a1a0a'||data.readUInt32BE(16)<1200||data.readUInt32BE(20)<700||Math.abs(data.readUInt32BE(16)/data.readUInt32BE(20)-16/9)>.025)throw Error('Invalid story illustration sheet '+path);
+ smallestShotWidth=Math.min(smallestShotWidth,Math.floor(data.readUInt32BE(16)/boards.columns));
+ smallestShotHeight=Math.min(smallestShotHeight,Math.floor(data.readUInt32BE(20)/boards.rows));
 }
+console.log(`Smallest individual shot: ${smallestShotWidth} × ${smallestShotHeight} source pixels (sheet dimensions are not shot dimensions).`);
+if(smallestShotWidth<1920||smallestShotHeight<1080)console.warn('Current story art is below full-HD per shot. Keep native-size display; full-screen HD art requires replacement source images.');
 for(const shot of Object.values(boards.shots))if(!boards.sheets.includes(shot.sheet)||!Number.isInteger(shot.index)||shot.index<0||shot.index>8||shot.beats.length>3)throw Error('Invalid full-story shot '+shot.id);
 const cover=await fs.readFile(`public/${artStyle.cover}`);
 if(cover.toString('hex',0,8)!=='89504e470d0a1a0a'||Math.abs(cover.readUInt32BE(16)/cover.readUInt32BE(20)-16/9)>.025)throw Error('Missing single landscape cover');

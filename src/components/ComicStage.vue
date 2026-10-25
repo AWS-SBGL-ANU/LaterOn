@@ -1,11 +1,26 @@
 <script setup lang="ts">
-import { computed,ref,onMounted,onUnmounted } from 'vue';
-const props=defineProps<{node:any;facts:any;art:{id:string;index:number;key?:string;url:string;position:string;size:string};simple?:boolean;choice?:string}>();
-const portraitQuery=window.matchMedia('(orientation: portrait)');
-const portrait=ref(portraitQuery.matches);
-function syncOrientation(){portrait.value=portraitQuery.matches;}
-onMounted(()=>portraitQuery.addEventListener('change',syncOrientation));
-onUnmounted(()=>portraitQuery.removeEventListener('change',syncOrientation));
+import { computed,shallowRef,watch } from 'vue';
+import { prepareArt } from '../services/assetManager';
+const props=defineProps<{node:any;facts:any;art:{id:string;index:number;key?:string;url:string;position:string;size:string;individual?:boolean;width?:number;height?:number};simple?:boolean;choice?:string}>();
+// New independent images use their complete canvas. Legacy sheets still crop
+// one of nine panels and retain their native-size display until replaced.
+const source=shallowRef<{url:string;width:number;height:number}|null>(null);
+watch(()=>[props.art.url,props.simple] as const,async ([url,simple],_,onCleanup)=>{
+ let active=true;onCleanup(()=>{active=false;});
+ if(simple)return;
+ try{
+  const image=await prepareArt(url);
+  if(active)source.value={url,width:image.naturalWidth,height:image.naturalHeight};
+ }catch{ /* App owns the retry and simplified-picture controls. */ }
+},{immediate:true});
+const crop=computed(()=>{
+ const size=source.value?.url===props.art.url?source.value:null;
+ const width=size?.width??props.art.width??1672,height=size?.height??props.art.height??941;
+ if(props.art.individual)return {x:0,y:0,width,height,sourceWidth:width,sourceHeight:height};
+ const column=props.art.index%3,row=Math.floor(props.art.index/3);
+ const x=Math.floor(column*width/3),y=Math.floor(row*height/3);
+ return {x,y,width:Math.floor((column+1)*width/3)-x,height:Math.floor((row+1)*height/3)-y,sourceWidth:width,sourceHeight:height};
+});
 const caption=computed(()=>{
  if(props.node.id==='E01')return props.facts.living==='together'?'两个人的日常，慢慢安放。':'今天带来的菜，还放在门边。';
  if(props.node.id==='E04'&&props.facts.notebookReturned)return '那本笔记，已经好好寄回去了。';
@@ -13,10 +28,10 @@ const caption=computed(()=>{
 });
 </script>
 <template>
- <div class="comic-stage" :class="{'simple-art':simple}" role="img" :aria-label="`${node.title}的粗铅笔淡彩手绘场景`">
+ <div class="comic-stage" :class="{'simple-art':simple,'individual-art':art.individual}" role="img" :aria-label="`${node.title}的粗蜡笔手绘场景`">
   <div v-if="!simple" class="shot-panel" aria-hidden="true">
-   <svg class="scene-picture" viewBox="0 0 1600 900" :preserveAspectRatio="portrait?'xMidYMid meet':'xMidYMid slice'" aria-hidden="true">
-    <svg x="0" y="0" width="1600" height="900" :viewBox="`${art.index%3*1600} ${Math.floor(art.index/3)*900} 1600 900`" overflow="hidden"><image :href="art.url" x="0" y="0" width="4800" height="2700" preserveAspectRatio="none" /></svg>
+   <svg class="scene-picture" :viewBox="`${crop.x} ${crop.y} ${crop.width} ${crop.height}`" :width="crop.width" :height="crop.height" :style="{'--shot-native-width':`${crop.width}px`}" :preserveAspectRatio="art.individual?'xMidYMid slice':'xMidYMid meet'" aria-hidden="true">
+    <image :href="art.url" x="0" y="0" :width="crop.sourceWidth" :height="crop.sourceHeight" />
    </svg>
   </div>
   <div v-if="simple" class="simple-caption"><span>插画暂未显示</span><p>你可以继续阅读，或重试加载画面。</p></div>
