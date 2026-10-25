@@ -6,13 +6,14 @@ import { useNarrativeStore,story } from './stores/narrativeStore';
 import ComicStage from './components/ComicStage.vue';
 import StoryDialogue from './components/StoryDialogue.vue';
 import { places,chapterNames } from './data/art';
-import { sceneArt,planAdvance,planChoice,tileArt } from './domain/presentation.mjs';
+import { sceneArt,planAdvance,planChoice } from './domain/presentation.mjs';
 import { artDependencies } from './domain/choreography.mjs';
+import {artStyle} from './data/artStyle.mjs';
 import { prepareArt } from './services/assetManager';
 import { gesture,startGesture,stopGesture,requireGestureRelease } from './services/gestureService';
 import { setSound,setMusicMood,moodFor,unlockAudio,music } from './services/audio';
 const baseUrl=import.meta.env.BASE_URL;
-const coverArt=tileArt('cover','bench',8,baseUrl);
+const coverArt={url:`${baseUrl}${artStyle.cover}`,position:'center',size:'contain'};
 const game=useNarrativeStore();const {state,node,beat,error,conflict,canContinue,endings}=storeToRefs(game);
 const screen=ref('cover'),modal=ref(''),transition=ref(false),transitionText=ref(''),artError=ref(''),simpleArt=ref(false),loading=ref(false),toast=ref(''),font=ref(28),reduced=ref(false),sound=ref(true),fullscreen=ref(false),newPrompt=ref(false);
 const dialogue=ref<InstanceType<typeof StoryDialogue>|null>(null);
@@ -124,7 +125,7 @@ onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.remove
 
   <main v-if="screen==='cover'" class="cute-cover" :inert="!!modal||transition">
    <div class="cover-stickers" aria-hidden="true"><span>✦</span><span>♡</span><span>✿</span><span>✦</span></div>
-   <section class="cute-cover-picture"><div class="cover-sketch" role="img" aria-label="小五和小梦坐在长椅上聊天的粗铅笔淡彩手绘封面" :style="{backgroundImage:`url(${coverArt.url})`,backgroundPosition:coverArt.position,backgroundSize:coverArt.size}"></div><div class="cover-title"><h1>后来呢</h1><p>慢慢靠近，慢慢喜欢。</p></div><span class="cover-charm">小五 × 小梦 <i>♡</i></span></section>
+   <section class="cute-cover-picture"><h1 class="visually-hidden">后来呢 · 慢慢靠近，慢慢喜欢。</h1><div class="cover-sketch" role="img" aria-label="后来呢，慢慢靠近，慢慢喜欢。标题绘在封面左侧，小梦和小五在右侧的小长椅上分享冰淇淋，周围是暖白留白。" :style="{backgroundImage:`url(${coverArt.url})`,backgroundPosition:coverArt.position,backgroundSize:coverArt.size}"></div><span class="cover-charm">小五 × 小梦 <i>♡</i></span></section>
    <div class="cute-cover-controls"><p class="cover-invitation">一支借来的笔，一口没吃完的冰淇淋。<br><span>那些没说出口的喜欢，后来呢？</span></p><div class="cover-buttons"><button class="button primary" @click="command(newStory)">翻开故事 <span>♡</span></button><button v-if="canContinue" class="button secondary" @click="command(()=>void resume())">接着上次 <span>↝</span></button><button class="button memory-button" @click="openModal('memories')">回忆小盒子 <span>✿</span></button></div><button class="text-button how-to" @click="openModal('help')">第一次见面？怎么玩呀 ♡</button><p class="cover-music-note">♫ 轻点翻开，让配乐陪你慢慢读</p></div>
   </main>
 

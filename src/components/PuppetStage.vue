@@ -24,8 +24,8 @@ function draw(){
    :['approach','sit-close'].includes(props.cue.action)?who==='girl':props.cue.action==='release';
   const legProgress=now?Math.max(0,Math.min(1,(progress-now.at)/(now.until-now.at))):progress;
   const stride=walking&&!props.reduced?Math.sin(legProgress*Math.PI*4)*12*Math.sin(legProgress*Math.PI):0;
-  joints.get(`${who}-leg-left`)?.setAttribute('transform',`rotate(${stride} 135 ${who==='girl'?507:423})`);
-  joints.get(`${who}-leg-right`)?.setAttribute('transform',`rotate(${-stride} 215 ${who==='girl'?507:423})`);
+  joints.get(`${who}-leg-left`)?.setAttribute('transform',`rotate(${stride} 135 415)`);
+  joints.get(`${who}-leg-right`)?.setAttribute('transform',`rotate(${-stride} 215 415)`);
   const closed=(now?now.eyes==='both'||now.eyes===who:['lean','hug','embrace','rest','smile'].includes(props.cue.action)&&progress>.68)||(!props.reduced&&progress>.32&&progress<.36);
   joints.get(`${who}-open`)?.setAttribute('opacity',closed?'0':'1');
   joints.get(`${who}-closed`)?.setAttribute('opacity',closed?'1':'0');
@@ -72,10 +72,10 @@ defineExpose({settleMotion,capturePose});
   </g>
   <g v-if="cue.mode==='remote'" class="remote-frames" fill="none" stroke="#c8c5b5" stroke-width="3"><path d="M170 172Q169 149 190 149H677Q700 151 700 172V808H170ZM902 172Q902 150 924 150H1410Q1431 150 1431 175V808H902ZM793 225V750" stroke-dasharray="8 12"/></g>
   <g v-for="who in ['boy','girl']" v-show="cue.mode!=='solo'||who===cue.actor" :key="who" :data-rig="who">
-   <g :data-rig="`${who}-leg-left`"><PuppetPart :part="`${who}-leg-left`" :x="who==='girl'?106:94" :y="who==='girl'?499:413" :width="who==='girl'?76:84" :height="who==='girl'?84:172" /></g>
-   <g :data-rig="`${who}-leg-right`"><PuppetPart :part="`${who}-leg-right`" :x="who==='girl'?179:177" :y="who==='girl'?499:413" :width="who==='girl'?76:84" :height="who==='girl'?84:172" /></g>
+   <g :data-rig="`${who}-leg-left`"><PuppetPart :part="`${who}-leg-left`" :x="94" :y="405" :width="84" :height="172" /></g>
+   <g :data-rig="`${who}-leg-right`"><PuppetPart :part="`${who}-leg-right`" :x="177" :y="405" :width="84" :height="172" /></g>
    <g :data-rig="`${who}-outer`"><PuppetPart :part="`${who}-outer`" :x="who==='girl'?68:222" :y="270" :width="92" :height="180" /></g>
-   <PuppetPart :part="`${who}-body`" :x="80" :y="244" :width="185" :height="who==='girl'?270:175" />
+   <PuppetPart :part="`${who}-body`" :x="60" :y="255" :width="220" :height="160" />
    <g :data-rig="`${who}-inner`">
     <g :clip-path="`url(#${maskId}-sleeve)`"><PuppetPart :part="`${who}-inner`" :x="who==='girl'?207:-72" :y="263" :width="210" :height="190" /></g>
     <g :data-rig="`${who}-wrist`"><g :clip-path="`url(#${maskId}-hand)`"><PuppetPart :part="`${who}-inner`" :x="who==='girl'?207:-72" :y="263" :width="210" :height="190" /></g></g>

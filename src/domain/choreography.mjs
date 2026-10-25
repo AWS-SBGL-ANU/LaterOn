@@ -1,6 +1,7 @@
 // A drawing is held until the next authored action. These cues only animate
 // characters; they never mutate the story, start a countdown or select a route.
-export const puppetSheet = 'art/puppets/parts.png';
+import { artStyle } from '../data/artStyle.mjs';
+export const puppetSheet = artStyle.puppet;
 import { latestDirection } from './sceneDirections.mjs';
 
 // [action, object, staging]. Each option has its own visual response; distant

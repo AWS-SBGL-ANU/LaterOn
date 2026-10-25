@@ -1,5 +1,6 @@
 import { advance, choose, current, matches } from './engine.mjs';
 import { performanceFor } from './choreography.mjs';
+import {artStyle} from '../data/artStyle.mjs';
 
 // Nine equal landscape panels per sheet; CSS positions are 0%, 50%, 100%.
 export const tiles = {
@@ -40,8 +41,8 @@ export const actionTiles = {
 export const sketchSheets = ['pen','bench','school','tender','departure','promises','distance','later','endings'];
 
 export function tileArt(id, sheet, index, base = '/') {
- return { id, sheet, index, boySide:'right', size:'300% 300%',
-  url:`${base}art/sketch/${sheet}.png`, position:`${index % 3 * 50}% ${Math.floor(index / 3) * 50}%` };
+ return { id, sheet, index, styleId:artStyle.id, boySide:'right', size:'300% 300%',
+  url:`${base}${artStyle.sheetDirectory}${sheet}.png`, position:`${index % 3 * 50}% ${Math.floor(index / 3) * 50}%` };
 }
 
 export function backgroundArt(node, facts, base = '/') {

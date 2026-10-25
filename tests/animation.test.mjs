@@ -28,7 +28,7 @@ test('All 105 choices produce preloadable, finite animation responses without ch
   while(state.nodeId===node.id&&state.phase!=='completed'){
    const before=structuredClone(state),art=sceneArt(node,state,'./');
    assert.ok(art.performance,`${node.id}:${option.id} needs an actual performance`);
-   assert.deepEqual(artDependencies(art,'./'),[art.url,'./art/puppets/parts.png']);
+   assert.deepEqual(artDependencies(art,'./'),[art.url,'./art/puppets/soft-parts.png']);
    const timeline=timelineFor(art.performance);
    assert.ok(timeline.duration>0);
    for(const progress of [0,.1,.32,.5,.68,.9,1])numericPose(sampleTimeline(timeline,progress));

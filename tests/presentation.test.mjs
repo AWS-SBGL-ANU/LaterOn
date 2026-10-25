@@ -23,7 +23,7 @@ test('Planning a page turn preserves the saved line until the illustration is re
  while(state.index<state.queue.length-1)advance(story,state);
  const final=structuredClone(state),next=planAdvance(story,state,'./');
  assert.deepEqual(state,final);assert.equal(next.node.id,'S02');assert.equal(next.crossScene,true);
- assert.equal(next.art.url,'./art/sketch/school.png');
+ assert.equal(next.art.url,'./art/soft/school.png');
 });
 
 test('A same-place branch dissolves its response without a location transition, while age variants stay distinct',()=>{

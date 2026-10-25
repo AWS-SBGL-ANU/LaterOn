@@ -3,7 +3,7 @@ import PuppetPart from './PuppetPart.vue';
 defineProps<{kind:string;open?:boolean;loaded?:boolean}>();
 </script>
 <template>
- <g class="story-prop" fill="#fff9ec" stroke="#887c6d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+ <g class="story-prop" fill="#fffbf1" stroke="#a2988a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
   <PuppetPart v-if="kind==='pen'" part="pen" :x="-45" :y="-65" :width="90" :height="125" />
   <PuppetPart v-else-if="kind==='icecream'" part="icecream" :x="-58" :y="-70" :width="116" :height="135" />
   <g v-else-if="kind==='icecream-cup'"><path d="M-50-19Q0-35 51-18L39 61Q0 75-39 62Z" fill="#93897b"/><path d="M-50-19Q-68-41-44-51Q-49-79-24-76Q-13-98 10-80Q37-90 47-63Q74-54 51-18Q2-2-50-19Z" fill="#e3b5b0"/><path d="M-37-40 0-48 31-34M-27 11-23 43" stroke="#bd9691"/></g>

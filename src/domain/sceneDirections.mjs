@@ -33,7 +33,7 @@ export const sceneDirections={
  B10:[['茶推到他手边','slide-cup','drink','girl'],['椅子往桌边挪','move-chair','application','girl']],
  B11:[['盐该买哪一袋','compare-shopping','groceries','girl'],['把伞往中间挪','share-umbrella','umbrella','girl'],['看见他手里提着','offer-snack','food','boy'],['两个人拿着就好','share-bag','groceries','boy']],
  F01:[['抱着刚买的书','hold-books','notebook','girl'],['小五把杯子放下','lower-cup','drink','boy'],['最上面那本书转','turn-notebook','notebook','girl']],
- D01:[['杯垫往他那边推','slide-coaster','coaster','girl'],['杯子也各自带走','take-own-cup','drink','boy'],['纸箱边角垫','wrap-notebook','notebook','boy']],
+ D01:[['杯垫往他那边推','slide-coaster','coaster','girl'],['杯子也各自带走','take-own-cup','drink','boy'],['纸箱边角垫','wrap-notebook','notebook','boy','solo']],
  D02:[['手指停在挂断键','hesitate-hangup','phone','boy','remote'],['窗户推开了一点','open-window','none','girl','remote']],
  D03:[['又把纸巾递了过去','offer-tissue','tissue','boy'],['指尖在他手边轻轻碰','touch-and-receive','tissue','girl'],['煮了第一锅汤','cook','food','boy'],['常放的地方让出一半','make-space-keys','keys','girl']],
  E01:[['转身时还是偶尔会碰到','pass-in-kitchen','food','boy'],['干净的勺子递过去','pass-spoon','spoon','girl'],['两人收好碗','clear-and-leave','keys','boy'],['伸手接同一只汤勺','share-spoon','spoon','boy'],['把她那只碗扶稳','steady-bowl','food','boy']],
