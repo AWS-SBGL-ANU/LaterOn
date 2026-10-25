@@ -3,7 +3,8 @@
 import fs from 'node:fs';
 import zlib from 'node:zlib';
 import {artStyle} from '../src/data/artStyle.mjs';
-const png=fs.readFileSync(new URL(`../public/${artStyle.puppet}`,import.meta.url));
+const arms=process.argv.includes('--arms'),columns=arms?2:4,rows=arms?2:4;
+const png=fs.readFileSync(new URL(`../public/${arms?artStyle.arms:artStyle.puppet}`,import.meta.url));
 const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
 if(png.toString('hex',0,8)!=='89504e470d0a1a0a'||png[24]!==8||png[25]!==6||png[28]!==0)throw Error('Expected a non-interlaced 8-bit RGBA PNG');
 const blocks=[];
@@ -19,10 +20,10 @@ for(let y=0;y<height;y++){
   pixels[start+x]=(raw+prediction)&255;
  }
 }
-const names=['girl-head','boy-head','girl-eyes-closed','boy-eyes-closed','girl-body','boy-body','girl-inner','boy-inner','girl-outer','boy-outer','girl-leg-left','girl-leg-right','boy-leg-left','boy-leg-right','pen','icecream'];
+const names=arms?['girl-upper','boy-upper','girl-lower','boy-lower']:['girl-head','boy-head','girl-eyes-closed','boy-eyes-closed','girl-body','boy-body','girl-inner','boy-inner','girl-outer','boy-outer','girl-leg-left','girl-leg-right','boy-leg-left','boy-leg-right','pen','icecream'];
 const crops={};
 for(let index=0;index<names.length;index++){
- const x0=Math.floor(index%4*width/4),x1=Math.floor((index%4+1)*width/4),y0=Math.floor(Math.floor(index/4)*height/4),y1=Math.floor((Math.floor(index/4)+1)*height/4);
+ const x0=Math.floor(index%columns*width/columns),x1=Math.floor((index%columns+1)*width/columns),y0=Math.floor(Math.floor(index/columns)*height/rows),y1=Math.floor((Math.floor(index/columns)+1)*height/rows);
  const seen=new Uint8Array((x1-x0)*(y1-y0)),stack=new Int32Array(seen.length),cellWidth=x1-x0;
  let largest={count:0,left:x1,top:y1,right:x0,bottom:y0};
  // Keep the primary connected part, ignoring small stray pencil flecks or the
@@ -48,8 +49,8 @@ for(let index=0;index<names.length;index++){
  left=Math.max(x0,left-3);top=Math.max(y0,top-3);right=Math.min(x1-1,right+3);bottom=Math.min(y1-1,bottom+3);
  crops[names[index]]=[left,top,right-left+1,bottom-top+1];
 }
-const manifest={styleId:artStyle.id,width,height,columns:4,rows:4,crops};
-fs.writeFileSync(new URL('../src/data/puppetParts.json',import.meta.url),JSON.stringify(manifest,null,2)+'\n');
+const manifest={styleId:artStyle.id,width,height,columns,rows,crops};
+fs.writeFileSync(new URL(arms?'../src/data/armSegments.json':'../src/data/puppetParts.json',import.meta.url),JSON.stringify(manifest,null,2)+'\n');
 let coloredFringe=0;
 for(let offset=0;offset<pixels.length;offset+=4)if(pixels[offset+3]>96&&pixels[offset]>200&&pixels[offset+1]<90&&pixels[offset+2]<90)coloredFringe++;
 console.log(JSON.stringify({width,height,parts:names.length,opaqueRedPixels:coloredFringe,crops},null,2));

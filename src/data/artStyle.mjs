@@ -4,5 +4,6 @@ export const artStyle=Object.freeze({
  cover:'art/cover-title-soft.png',
  sheetDirectory:'art/soft/',
  puppet:'art/puppets/soft-parts.png',
+ arms:'art/puppets/arm-segments.png',
  paper:'#faf8f2'
 });

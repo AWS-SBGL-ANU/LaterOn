@@ -19,7 +19,6 @@ defineProps<{kind:string;open?:boolean;loaded?:boolean}>();
   <g v-else-if="kind==='phone'"><path d="M-38-74Q-41-82-27-82H31Q40-82 40-72L38 73Q37 82 26 82H-28Q-40 80-39 70Z" fill="#666966"/><path d="M-30-60H30V57H-31Z" fill="#e7eee5"/><path d="M-21-35H20M-21-17H13M-21 2H21M-6 70H6" stroke="#afbca8"/></g>
   <g v-else-if="['water','bottle','drink','thermos'].includes(kind)">
    <path d="M-32-65Q0-78 33-66L32 65Q1 79-32 65Z" :fill="kind==='thermos'?'#a9b19c':'#dfebe3'"/><path d="M-32-65Q0-53 33-66M-30-52Q0-42 32-53M-20-18V39"/>
-   <path v-if="kind==='water'" d="M59-41Q84-53 109-41V64Q84 76 59 64ZM60-26H108" fill="#dfebe3"/>
    <path v-if="kind==='thermos'&&!open" d="M-22-84H22L26-69H-26Z" fill="#889582"/>
   </g>
   <g v-else-if="['bag','breakfast','groceries'].includes(kind)"><path d="M-70-43Q-73-52-59-52H62L72 82Q0 94-72 80Z" :fill="kind==='bag'?'#727d78':'#dec5a1'"/><path d="M-27-51V-77Q1-108 29-77V-51" fill="none"/><path d="M-54-20-55 61M54-20 57 63" opacity=".5"/><path v-if="kind==='groceries'" d="M-22-48-35-98-16-88-4-108 8-87 28-101 22-48" fill="#adba92"/></g>

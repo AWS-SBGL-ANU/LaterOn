@@ -128,7 +128,7 @@ export function performanceFor(node,state,art) {
  const marker=directed?.id??state.queue.slice(0,state.index+1).findLast((b,i)=>
   b.kind==='action'||b.art&&b.art!==state.queue[i-1]?.art)?.id;
  const onset=marker?state.queue.findIndex(b=>b.id===marker):0;
- return {action,object,mode,setting:directed?.profile==='walk-together'?'outside':settingFor(node),
+ return {action,object,mode,nodeId:node.id,setting:directed?.profile==='walk-together'?'outside':settingFor(node),
   // Stay on one key through regular dialogue, without repeating an action.
   key:`${node.id}:${responding?state.decisions[node.id]:'dialogue'}:${directed?.profile??action}:${marker??'start'}`,
   onset,profile:directed?.profile,
@@ -138,5 +138,5 @@ export function performanceFor(node,state,art) {
 }
 
 export function artDependencies(art,base='/') {
- return art.performance?[art.url,`${base}${puppetSheet}`]:[art.url];
+ return art.performance?[art.url,`${base}${puppetSheet}`,`${base}${artStyle.arms}`]:[art.url];
 }
