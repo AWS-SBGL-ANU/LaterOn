@@ -23,7 +23,7 @@ test('Buying and sharing ice cream use distinct actual illustrations, and a hug 
  const hug=story.nodes.S10.choices.find(c=>c.id==='A').response.find(b=>b.kind==='action'&&b.art==='airport-hug');
  assert.ok(hug);
  const preview={...s,nodeId:'S10',phase:'response',queue:[hug],index:0};
- assert.equal(sceneArt(story.nodes.S10,preview).sheet,'moments-embrace');
+ assert.equal(sceneArt(story.nodes.S10,preview).sheet,'departure');
  for(const node of Object.values(story.nodes))for(const beat of [...node.beats,...node.choices.flatMap(c=>c.response)])if(beat.art)assert.ok(actionTiles[beat.art]);
 });
 test('All scenes include inner or narrative detail, and friendship never borrows a lovers hug',()=>{
@@ -48,12 +48,12 @@ test('Five bundled music pieces contain real distinct PCM audio and the font is 
 test('Touching, purchasing, sharing and leaning are drawn only after their action begins',()=>{
  for(const id of ['S15','S16','S17','S19']){
   const node=story.nodes[id],state={facts:{era:'high'},phase:'dialogue',decisions:{},queue:node.beats,index:0};
-  const before=sceneArt(node,state);assert.equal(before.sheet,'moments-before');
+  const before=sceneArt(node,state);assert.ok(['pen','tender','bench'].includes(before.sheet));
   let queue=node.beats,index=queue.findIndex(b=>b.art);
   if(index<0){queue=node.choices[0].response;index=queue.findIndex(b=>b.art);}
   assert.ok(index>=0,id+' needs an authored action cue');
   const after=sceneArt(node,{...state,phase:'response',queue,index});
-  assert.equal(after.sheet,'moments-school');assert.notEqual(after.url,before.url);
+  assert.notEqual(after.id,before.id);assert.ok(after.url!==before.url||after.position!==before.position);
  }
 });
 

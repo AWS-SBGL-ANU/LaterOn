@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "nodes": {
     "S01": {
       "id": "S01",
@@ -590,95 +590,149 @@
         {
           "kind": "narration",
           "speaker": "旁白",
-          "text": "她笑了一下，把桌角那支蓝色的推过来。",
+          "text": "她笑了一下，把桌角那支蓝色的推到两张课桌之间。",
+          "art": "pen-offer",
           "id": "S15-d-4"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "先用这支。别咬笔帽。",
+          "art": "pen-offer",
           "id": "S15-d-5"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "你怎么知道我——",
+          "art": "pen-offer",
           "id": "S15-d-6"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "上次还回来的时候，帽子扁了一点。",
+          "art": "pen-offer",
           "id": "S15-d-7"
-        },
-        {
-          "kind": "narration",
-          "speaker": "旁白",
-          "text": "他赶紧把手往回缩。她也正好伸手去拿笔，两个人的指尖轻轻碰在一起。",
-          "id": "S15-d-8"
         },
         {
           "kind": "action",
           "speaker": "",
-          "text": "她的手停了一瞬。他先松开了笔，笔滚到两张课桌中间。",
+          "text": "他伸手接笔，她还没有完全松开。两个人的指尖，隔着笔杆轻轻碰了一下。",
+          "art": "school-fingers",
+          "id": "S15-d-8"
+        },
+        {
+          "kind": "narration",
+          "speaker": "旁白",
+          "text": "谁都没有马上把手移开。",
           "art": "school-fingers",
           "id": "S15-d-9"
         },
         {
           "kind": "thought",
           "speaker": "小五",
-          "text": "只是碰了一下。为什么连它滚了几圈，我都数得那么清楚。",
+          "text": "只是碰了一下。为什么突然忘了自己要说什么。",
           "art": "school-fingers",
           "id": "S15-d-10"
+        },
+        {
+          "kind": "action",
+          "speaker": "",
+          "text": "他先缩回手，笔在桌沿晃了一下，滚进两张课桌之间。",
+          "art": "pen-fall",
+          "id": "S15-d-11"
+        },
+        {
+          "kind": "narration",
+          "speaker": "旁白",
+          "text": "笔落在地上，很轻的一声。两个人都低下头。",
+          "art": "pen-floor",
+          "id": "S15-d-12"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "……掉了。",
-          "art": "school-fingers",
-          "id": "S15-d-11"
+          "art": "pen-floor",
+          "id": "S15-d-13"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "我捡。",
-          "art": "school-fingers",
-          "id": "S15-d-12"
+          "art": "pen-floor",
+          "id": "S15-d-14"
+        },
+        {
+          "kind": "action",
+          "speaker": "",
+          "text": "他们几乎同时弯下腰，手伸向同一支笔。",
+          "art": "pen-reach",
+          "id": "S15-d-15"
         },
         {
           "kind": "narration",
           "speaker": "旁白",
-          "text": "他们同时低头，差一点碰到额头，又都坐直了。",
-          "art": "school-fingers",
-          "id": "S15-d-13"
+          "text": "抬眼的时候，才发现彼此靠得这样近。",
+          "art": "pen-near",
+          "id": "S15-d-16"
+        },
+        {
+          "kind": "speech",
+          "speaker": "小五",
+          "text": "你先……不是，我来。",
+          "art": "pen-near",
+          "id": "S15-d-17"
+        },
+        {
+          "kind": "speech",
+          "speaker": "小梦",
+          "text": "你到底让我先什么？",
+          "art": "pen-near",
+          "id": "S15-d-18"
         },
         {
           "kind": "thought",
           "speaker": "小梦",
           "text": "我明明只是想把笔递给他。怎么耳朵也跟着热起来。",
-          "art": "school-fingers",
-          "id": "S15-d-14"
+          "art": "pen-near",
+          "id": "S15-d-19"
+        },
+        {
+          "kind": "action",
+          "speaker": "",
+          "text": "她先坐回去。他把笔捡起来，轻轻放回自己的练习册旁。",
+          "art": "pen-pickup",
+          "id": "S15-d-20"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "老师要开始了。",
-          "art": "school-fingers",
-          "id": "S15-d-15"
+          "art": "pen-pickup",
+          "id": "S15-d-21"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "嗯。",
-          "art": "school-fingers",
-          "id": "S15-d-16"
+          "art": "pen-pickup",
+          "id": "S15-d-22"
+        },
+        {
+          "kind": "narration",
+          "speaker": "旁白",
+          "text": "两个人终于坐好。她翻开书，他取下笔帽。",
+          "art": "pen-writing",
+          "id": "S15-d-23"
         },
         {
           "kind": "narration",
           "speaker": "旁白",
           "text": "那次听写的第一个单词，他漏了开头两个字母。",
-          "art": "school-fingers",
-          "id": "S15-d-17"
+          "art": "pen-writing",
+          "id": "S15-d-24"
         }
       ],
       "tail": []
@@ -1546,6 +1600,7 @@
               "kind": "narration",
               "speaker": "旁白",
               "text": "她偏过脸笑。他很认真地看着杯子，像那里写着一道很难的题。",
+              "art": "bench-cup",
               "id": "S17-r-2"
             }
           ]
@@ -1610,107 +1665,155 @@
               "kind": "narration",
               "speaker": "旁白",
               "text": "这次他们都有了一个，不必再装作刚好顺路的理由。",
+              "art": "bench-smile",
               "id": "S17-r-3"
             }
           ]
         }
       ],
       "endingId": null,
-      "time": "买完冰淇淋，校门外的长椅",
+      "time": "同一天，放学后的长椅",
       "beats": [
         {
           "kind": "narration",
           "speaker": "旁白",
-          "text": "长椅刚好晒到最后一点太阳。她坐下时，中间还留了一个书包的位置。",
+          "text": "长椅刚好晒到最后一点太阳。她坐下时，中间还留了一点空隙。",
           "id": "S17-d-0"
+        },
+        {
+          "kind": "narration",
+          "speaker": "旁白",
+          "text": "他刚试了两口，她帮他接着纸杯，免得冰淇淋滴到书包上。",
+          "id": "S17-d-1"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "味道怎么样？",
-          "id": "S17-d-1"
+          "id": "S17-d-2"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "还没吃出来。",
-          "id": "S17-d-2"
+          "id": "S17-d-3"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "你不是已经吃了两口？",
-          "id": "S17-d-3"
+          "id": "S17-d-4"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "刚才太冰。",
-          "id": "S17-d-4"
+          "id": "S17-d-5"
         },
         {
           "kind": "narration",
           "speaker": "旁白",
-          "text": "她看着那杯冰淇淋，小声说，也想尝一点。",
-          "id": "S17-d-5"
+          "text": "她看着杯子里的那一点粉色，转过头，小声说也想尝一点。",
+          "art": "bench-ask",
+          "id": "S17-d-6"
         },
         {
           "kind": "thought",
           "speaker": "小五",
           "text": "我应该去多拿一把勺子。可那句话，偏偏卡在了喉咙里。",
-          "id": "S17-d-6"
+          "art": "bench-ask",
+          "id": "S17-d-7"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "我去给你拿新的？",
-          "id": "S17-d-7"
+          "art": "bench-ask",
+          "id": "S17-d-8"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "你介意的话，就拿。",
-          "id": "S17-d-8"
+          "art": "bench-ask",
+          "id": "S17-d-9"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "我不介意。你呢？",
-          "id": "S17-d-9"
+          "art": "bench-ask",
+          "id": "S17-d-10"
         },
         {
-          "kind": "narration",
-          "speaker": "旁白",
-          "text": "她点点头，伸出手。他才把杯子和勺子都递过去。",
-          "id": "S17-d-10"
+          "kind": "speech",
+          "speaker": "小梦",
+          "text": "嗯……我也不介意。",
+          "art": "bench-ask",
+          "id": "S17-d-11"
         },
         {
           "kind": "action",
           "speaker": "",
-          "text": "她用那把小勺子挖了一点，尝完以后，像什么也没发生一样说，草莓还挺甜。",
+          "text": "他伸手扶住纸杯，让她把杯子拿稳。两个人都只看着杯沿。",
+          "art": "bench-pass",
+          "id": "S17-d-12"
+        },
+        {
+          "kind": "action",
+          "speaker": "",
+          "text": "她拿起那把小勺子，在冰淇淋边上轻轻挖了一点。",
+          "art": "bench-spoon",
+          "id": "S17-d-13"
+        },
+        {
+          "kind": "action",
+          "speaker": "",
+          "text": "她尝了一小口。小五把脸转开，像突然对路边很感兴趣。",
           "art": "school-share-icecream",
-          "id": "S17-d-11"
+          "id": "S17-d-14"
+        },
+        {
+          "kind": "speech",
+          "speaker": "小梦",
+          "text": "草莓还挺甜。",
+          "art": "school-share-icecream",
+          "id": "S17-d-15"
         },
         {
           "kind": "narration",
           "speaker": "旁白",
-          "text": "他没立刻接话，只把拿着纸巾的那只手攥紧了一点。",
-          "art": "school-share-icecream",
-          "id": "S17-d-12"
+          "text": "她放下勺子，看了他一眼。他只把纸巾攥紧了一点。",
+          "art": "bench-shy",
+          "id": "S17-d-16"
         },
         {
           "kind": "thought",
           "speaker": "小梦",
           "text": "其实我看见他刚才用了。现在装作没看见，会不会太明显。",
-          "art": "school-share-icecream",
-          "id": "S17-d-13"
+          "art": "bench-shy",
+          "id": "S17-d-17"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "你怎么不吃了？",
-          "art": "school-share-icecream",
-          "id": "S17-d-14"
+          "art": "bench-shy",
+          "id": "S17-d-18"
+        },
+        {
+          "kind": "speech",
+          "speaker": "小五",
+          "text": "啊？哦。",
+          "art": "bench-talk",
+          "id": "S17-d-19"
+        },
+        {
+          "kind": "narration",
+          "speaker": "旁白",
+          "text": "他摸了摸后颈。她等了一下，终于忍不住笑了。",
+          "art": "bench-talk",
+          "id": "S17-d-20"
         }
       ],
       "tail": []
@@ -2039,28 +2142,28 @@
           "kind": "speech",
           "speaker": "小五",
           "text": "温水。杯盖洗过的。",
-          "art": "school-thermos",
+          "art": "thermos-pour",
           "id": "S18-d-4"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "你什么时候装的？",
-          "art": "school-thermos",
+          "art": "thermos-pour",
           "id": "S18-d-5"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "家里。",
-          "art": "school-thermos",
+          "art": "thermos-pour",
           "id": "S18-d-6"
         },
         {
           "kind": "thought",
           "speaker": "小五",
           "text": "总不能说，看见她早上那条请假消息，我又回去灌了一次吧。",
-          "art": "school-thermos",
+          "art": "thermos-pour",
           "id": "S18-d-7"
         },
         {
@@ -2136,24 +2239,28 @@
               "kind": "speech",
               "speaker": "小五",
               "text": "到了。不用急。",
+              "art": "bus-awake",
               "id": "S19-r-0"
             },
             {
               "kind": "speech",
               "speaker": "小梦",
               "text": "……我是不是压疼你了？",
+              "art": "bus-awake",
               "id": "S19-r-1"
             },
             {
               "kind": "speech",
               "speaker": "小五",
               "text": "没有。",
+              "art": "bus-awake",
               "id": "S19-r-2"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "他说得太快。她下车时看了他一眼，耳朵悄悄红了一点。",
+              "art": "bus-awake",
               "id": "S19-r-3"
             }
           ]
@@ -2260,18 +2367,21 @@
           "kind": "narration",
           "speaker": "旁白",
           "text": "他指了指自己的肩膀，指到一半，又有点不好意思地放下。",
+          "art": "bus-offer",
           "id": "S19-d-6"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "如果你不介意的话。",
+          "art": "bus-offer",
           "id": "S19-d-7"
         },
         {
           "kind": "narration",
           "speaker": "旁白",
           "text": "她看了他一眼，把目光移到窗外。过了一会儿，才轻轻靠过来。",
+          "art": "bus-offer",
           "id": "S19-d-8"
         },
         {
@@ -2779,18 +2889,21 @@
               "kind": "action",
               "speaker": "",
               "text": "她把拆好的筷子递给他。",
+              "art": "school-confession",
               "id": "S08-r-5"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "他们一直坐到老板开始收另一边的桌子，才发现已经过了很久。",
+              "art": "school-confession",
               "id": "S08-r-6"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "从面馆出来，街口的灯刚刚亮起。两个人沿着回家的小路，慢慢走了一段。",
+              "art": "school-confession",
               "id": "S08-r-7"
             },
             {
@@ -3296,7 +3409,7 @@
       "choices": [
         {
           "id": "A",
-          "label": "抱住她，等她先松开。",
+          "label": "出发前，问她能不能抱一下。",
           "routes": [
             {
               "to": "S11"
@@ -3305,41 +3418,105 @@
           "response": [
             {
               "kind": "speech",
-              "speaker": "小梦",
-              "text": "你书包拉链硌着我了。",
+              "speaker": "小五",
+              "text": "我能抱你一下吗？",
               "id": "S10-r-0"
             },
             {
               "kind": "speech",
-              "speaker": "小五",
-              "text": "对不起，我挪一下。",
+              "speaker": "小梦",
+              "text": "嗯。先把袋子放好。",
               "id": "S10-r-1"
             },
             {
-              "kind": "speech",
-              "speaker": "小梦",
-              "text": "……不是让你现在松开。",
+              "kind": "narration",
+              "speaker": "旁白",
+              "text": "他把早餐袋放到行李箱上，确认不会滑下来，才转回身。",
               "id": "S10-r-2"
             },
             {
               "kind": "action",
               "speaker": "",
-              "text": "她额头靠过来，手仍抓着纸袋提绳。",
+              "text": "他轻轻张开手，站在原地等她。",
+              "art": "airport-open",
               "id": "S10-r-3"
+            },
+            {
+              "kind": "narration",
+              "speaker": "旁白",
+              "text": "她看了他一会儿，往前挪了半步。",
+              "art": "airport-open",
+              "id": "S10-r-4"
             },
             {
               "kind": "action",
               "speaker": "",
-              "text": "他先张开手，等她走近。她把额头抵在他肩上，手指慢慢抓住他背后的衣料。",
+              "text": "她走到他面前，额头轻轻靠上来。他的手还停在她肩膀外侧。",
+              "art": "airport-step",
+              "id": "S10-r-5"
+            },
+            {
+              "kind": "speech",
+              "speaker": "小梦",
+              "text": "书包拉链硌着我了。",
+              "art": "airport-step",
+              "id": "S10-r-6"
+            },
+            {
+              "kind": "speech",
+              "speaker": "小五",
+              "text": "对不起，我挪一下。",
+              "art": "airport-step",
+              "id": "S10-r-7"
+            },
+            {
+              "kind": "speech",
+              "speaker": "小梦",
+              "text": "……不是让你现在松开。",
+              "art": "airport-step",
+              "id": "S10-r-8"
+            },
+            {
+              "kind": "action",
+              "speaker": "",
+              "text": "他才慢慢抱住她。她把手从纸袋提绳上松开，抓住他背后的衣料。",
               "art": "airport-hug",
-              "id": "S10-r-4"
+              "id": "S10-r-9"
             },
             {
               "kind": "thought",
               "speaker": "小五",
               "text": "原来真抱住的时候，会比想象里更舍不得放开。",
-              "art": "airport-hug",
-              "id": "S10-r-5"
+              "art": "airport-hold",
+              "id": "S10-r-10"
+            },
+            {
+              "kind": "narration",
+              "speaker": "旁白",
+              "text": "广播又响了一遍。他们谁都没马上说话。",
+              "art": "airport-hold",
+              "id": "S10-r-11"
+            },
+            {
+              "kind": "speech",
+              "speaker": "小梦",
+              "text": "到了，记得告诉我。",
+              "art": "airport-hold",
+              "id": "S10-r-12"
+            },
+            {
+              "kind": "speech",
+              "speaker": "小五",
+              "text": "会的。",
+              "art": "airport-hold",
+              "id": "S10-r-13"
+            },
+            {
+              "kind": "action",
+              "speaker": "",
+              "text": "她先松开一点。他把手放下来，最后又轻轻握了握她的指尖。",
+              "art": "airport-release",
+              "id": "S10-r-14"
             }
           ]
         },
@@ -3380,6 +3557,7 @@
               "kind": "narration",
               "speaker": "旁白",
               "text": "两个人低头看同一张行程单，肩膀碰着肩膀。她把回程日期划了一个小圈。",
+              "art": "airport-itinerary",
               "id": "S10-r-4"
             }
           ]
@@ -3415,12 +3593,14 @@
               "kind": "action",
               "speaker": "",
               "text": "她擦过眼角才靠近镜头，两个人都笑得有点勉强。",
+              "art": "airport-selfie",
               "id": "S10-r-3"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "照片拍完，她没有马上移开。两个人又并肩站了一小会儿。",
+              "art": "airport-selfie",
               "id": "S10-r-4"
             }
           ]
@@ -3439,42 +3619,49 @@
           "kind": "narration",
           "speaker": "旁白",
           "text": "小梦替他把书包外袋的拉链拉好，手在拉链头上停了一会儿。",
+          "art": "airport-zip",
           "id": "S10-d-1"
         },
         {
           "kind": "thought",
           "speaker": "小梦",
           "text": "再多问一个小问题，他是不是就能再站一会儿。",
+          "art": "airport-zip",
           "id": "S10-d-2"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "飞机上吃的。别压着。",
+          "art": "airport-breakfast",
           "id": "S10-d-3"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "你怎么知道我没吃早饭？",
+          "art": "airport-breakfast",
           "id": "S10-d-4"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "你一紧张就说不饿。",
+          "art": "airport-breakfast",
           "id": "S10-d-5"
         },
         {
           "kind": "speech",
           "speaker": "小五",
           "text": "现在有点饿了。",
+          "art": "airport-breakfast",
           "id": "S10-d-6"
         },
         {
           "kind": "speech",
           "speaker": "小梦",
           "text": "那还不算特别紧张。",
+          "art": "airport-breakfast",
           "id": "S10-d-7"
         },
         {
@@ -3482,6 +3669,7 @@
           "speaker": "小梦",
           "text": "落地太晚就发消息。电话明天打。",
           "when": "transparent",
+          "art": "airport-breakfast",
           "id": "S10-d-8"
         },
         {
@@ -3489,6 +3677,7 @@
           "speaker": "小梦",
           "text": "上次没说完的，到了也别当没发生。",
           "when": "opaque",
+          "art": "airport-breakfast",
           "id": "S10-d-9"
         }
       ],
@@ -7044,6 +7233,7 @@
               "kind": "narration",
               "speaker": "旁白",
               "text": "搬箱子的周末，两个人在小厨房里试着煮了第一锅汤。",
+              "art": "adult-cook",
               "id": "D03-r-5"
             },
             {
@@ -7828,12 +8018,14 @@
               "kind": "action",
               "speaker": "",
               "text": "小五把手机收起，走向常去的面馆。",
+              "art": "metro-exit",
               "id": "E04-r-3"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "手机收进口袋的时候，他闻见面馆飘出来的汤味，便推门进去。",
+              "art": "metro-exit",
               "id": "E04-r-4"
             }
           ]
@@ -7865,12 +8057,14 @@
               "kind": "action",
               "speaker": "",
               "text": "他加快脚步，走上车站出口的台阶。",
+              "art": "metro-exit",
               "id": "E04-r-3"
             },
             {
               "kind": "narration",
               "speaker": "旁白",
               "text": "朋友替他把椅子拉开。他坐下来，把今晚想吃的说得很清楚。",
+              "art": "metro-exit",
               "id": "E04-r-4"
             }
           ]

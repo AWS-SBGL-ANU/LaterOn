@@ -4,4 +4,5 @@ import App from './App.vue';
 import './styles.css';
 import './immersive.css';
 import './kawaii.css';
+import './sketch.css';
 createApp(App).use(createPinia()).mount('#app');

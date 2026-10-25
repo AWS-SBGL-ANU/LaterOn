@@ -1,62 +1,96 @@
-import { advance, current } from './engine.mjs';
+import { advance, choose, current, matches } from './engine.mjs';
+import { performanceFor } from './choreography.mjs';
 
+// Nine equal landscape panels per sheet; CSS positions are 0%, 50%, 100%.
 export const tiles = {
- BG01:['school',0],BG02:['school',1],BG03:['school',2],BG04:['school',3],
- BG05:['school-days',0],BG06:['school-days',1],BG07:['school-days',2],BG08:['school-days',3],
- BG09:['apart',0],BG10:['apart',1],BG11:['apart',2],BG12:['apart',3],
- BG13:['university',0],BG14:['university',1],BG15:['university',2],BG16:['university',3],
- BG17:['promises',0],BG18:['promises',1],BG19:['promises',2],BG20:['promises',3],
- BG21:['adulthood',0],'BG22-high':['adulthood',1],'BG22-university':['adulthood',2],'BG22-adult':['adulthood',3],
- BG23:['endings',0],BG24:['moments-everyday',3],BG25:['endings',2],BG26:['endings',3],BG27:['metro',0],
- BG28:['moments-before',0],BG29:['moments-before',1],BG30:['moments-before',2],
- BG31:['moments-tender',1],BG32:['moments-before',3],BG33:['moments-tender',2]
+ BG01:['school',0], BG02:['school',2], BG03:['school',3], BG04:['school',4],
+ BG05:['school',5], BG06:['tender',2], BG07:['school',7], BG08:['promises',0],
+ BG09:['promises',4], BG10:['departure',0], BG11:['distance',0], BG12:['distance',1],
+ BG13:['promises',6], BG14:['distance',2], BG15:['promises',8], BG16:['distance',3],
+ BG17:['distance',4], BG18:['distance',5], BG19:['distance',6], BG20:['distance',7],
+ BG21:['later',0], 'BG22-high':['later',1], 'BG22-university':['later',2], 'BG22-adult':['later',3],
+ BG23:['later',4], BG24:['later',5], BG25:['later',6], BG26:['later',7], BG27:['later',8],
+ BG28:['pen',0], BG29:['tender',0], BG30:['bench',0], BG31:['tender',3],
+ BG32:['tender',6], BG33:['school',7]
 };
-tiles.BG06=['moments-tender',0];tiles.BG08=['moments-embrace',1];
-tiles.BG02=['moments-classroom',0];tiles.BG03=['moments-classroom',1];tiles.BG04=['moments-classroom',2];
-export const actionTiles={
- 'school-fingers':['moments-school',0],'school-buy-icecream':['moments-school',1],
- 'school-share-icecream':['moments-school',2],'school-shoulder':['moments-school',3],
- 'school-umbrella':['moments-tender',0],'school-thermos':['moments-tender',1],
- 'school-paperstar':['moments-tender',2],'school-handhold':['moments-tender',3],
- 'school-listen':['moments-embrace',0],'school-confession':['moments-embrace',1],
- 'airport-hug':['moments-embrace',2],'bridge-hug':['moments-embrace',3],
- 'university-reunion':['moments-everyday',1],'adult-groceries':['moments-everyday',2],'adult-cook':['moments-everyday',3],
- 'school-water':['moments-classroom',3]
+
+export const actionTiles = {
+ 'school-listen':['school',1], 'school-water':['school',6],
+ 'pen-offer':['pen',1], 'school-fingers':['pen',2], 'pen-fall':['pen',3],
+ 'pen-floor':['pen',4], 'pen-reach':['pen',5], 'pen-near':['pen',6],
+ 'pen-pickup':['pen',7], 'pen-writing':['pen',8],
+ 'school-buy-icecream':['tender',1],
+ 'bench-ask':['bench',1], 'bench-pass':['bench',2], 'bench-spoon':['bench',3],
+ 'school-share-icecream':['bench',4], 'bench-shy':['bench',5],
+ 'bench-talk':['bench',6], 'bench-cup':['bench',7], 'bench-smile':['bench',8],
+ 'school-umbrella':['tender',2], 'thermos-pour':['tender',4], 'school-thermos':['tender',5],
+ 'bus-awake':['tender',6], 'bus-offer':['tender',7], 'school-shoulder':['tender',8],
+ 'school-paperstar':['school',8], 'school-confession':['promises',1],
+ 'hand-offer':['promises',2], 'school-handhold':['promises',3],
+ 'airport-zip':['departure',1], 'airport-breakfast':['departure',2],
+ 'airport-open':['departure',3], 'airport-step':['departure',4],
+ 'airport-hug':['departure',5], 'airport-hold':['departure',6],
+ 'airport-release':['departure',7], 'airport-itinerary':['departure',8],
+ 'airport-selfie':['endings',5], 'bridge-hug':['promises',5],
+ 'university-reunion':['promises',7], 'adult-groceries':['distance',8],
+ 'adult-cook':['later',5], 'kitchen-spoon':['endings',0], 'adult-calendar':['endings',7],
+ 'notebook-return':['endings',8], 'metro-exit':['endings',4]
 };
+
+export const sketchSheets = ['pen','bench','school','tender','departure','promises','distance','later','endings'];
+
+export function tileArt(id, sheet, index, base = '/') {
+ return { id, sheet, index, boySide:'right', size:'300% 300%',
+  url:`${base}art/sketch/${sheet}.png`, position:`${index % 3 * 50}% ${Math.floor(index / 3) * 50}%` };
+}
 
 export function backgroundArt(node, facts, base = '/') {
  const id = node.backgroundId === 'BG22' ? `BG22-${facts.era}` : node.backgroundId;
- const [sheet, index] = tiles[id];
- return tileArt(id, sheet, index, base);
+ const [sheet,index] = tiles[id];
+ return tileArt(id,sheet,index,base);
 }
 
-function tileArt(id, sheet, index, base) {
- return {id, sheet, index, boySide:id==='school-buy-icecream'?'right':'left',url:`${base}art/atlases/${sheet}.png`, position:`${index % 2 ? 100 : 0}% ${index > 1 ? 100 : 0}%`};
-}
-
-export function sceneArt(node, state, base = '/') {
- const action=state.queue.slice(0,state.index+1).findLast(beat=>beat.art)?.art;
- if(action&&actionTiles[action]){const [sheet,index]=actionTiles[action];return tileArt(action,sheet,index,base);}
- // Keep the closing illustration during the final thought and after reloading.
+function illustrationArt(node, state, base = '/') {
+ // Keep the final dialogue shot after choosing; do not reset objects and poses.
+ const dialogueArt = ['response','completed'].includes(state.phase)
+  ? node.beats.filter(beat => matches(beat.when,state)).findLast(beat => beat.art)?.art : null;
+ const action = state.queue.slice(0,state.index + 1).findLast(beat => beat.art)?.art ?? dialogueArt;
  const closing = state.phase === 'completed' || state.phase === 'response' &&
-  state.queue.slice(0, state.index + 1).some(beat => beat.kind === 'action' && beat.id?.includes('-r-'));
+  state.queue.slice(0,state.index + 1).some(beat => beat.kind === 'action' && beat.id?.includes('-r-'));
  if (closing && node.id === 'E01') {
   const choice = state.decisions.E01;
-  return tileArt(`E01-finale-${choice}`, 'metro', choice === 'A' ? 2 : 1, base);
+  return tileArt(`E01-finale-${choice}`,'endings',choice === 'A' ? 1 : 2,base);
  }
- if (closing && node.id === 'E03') return tileArt('E03-finale', 'metro', 3, base);
- return backgroundArt(node, state.facts, base);
+ if (closing && node.id === 'E03') return tileArt('E03-finale','endings',3,base);
+ if (action && actionTiles[action]) {
+  const [sheet,index] = actionTiles[action];
+  return tileArt(action,sheet,index,base);
+ }
+ return backgroundArt(node,state.facts,base);
+}
+
+export function sceneArt(node,state,base='/') {
+ const art=illustrationArt(node,state,base);
+ const performance=performanceFor(node,state,art);
+ return {...art,performance,key:performance?`${art.id}:${performance.key}`:art.id};
+}
+
+function plan(story, state, next, base) {
+ const node = story.nodes[next.nodeId], art = sceneArt(node,next,base);
+ return { node, art, beat:current(next),
+  artChanged:art.key !== sceneArt(story.nodes[state.nodeId],state,base).key,
+  crossScene:state.nodeId !== next.nodeId &&
+   (backgroundArt(node,next.facts,base).id !== backgroundArt(story.nodes[state.nodeId],state.facts,base).id || ['B08','B10'].includes(node.id)) };
 }
 
 export function planAdvance(story, state, base = '/') {
  const next = structuredClone(state);
- if (!advance(story, next)) return null;
- const node = story.nodes[next.nodeId];
- const art = sceneArt(node, next, base);
- return {
-  node, art, beat:current(next),
-  artChanged:art.id !== sceneArt(story.nodes[state.nodeId], state, base).id,
-  crossScene:state.nodeId !== next.nodeId &&
-   (backgroundArt(node, next.facts, base).id !== backgroundArt(story.nodes[state.nodeId], state.facts, base).id || ['B08','B10'].includes(node.id))
- };
+ if (!advance(story,next)) return null;
+ return plan(story,state,next,base);
+}
+
+export function planChoice(story, state, choice, base = '/') {
+ const next = structuredClone(state);
+ if (!choose(story,next,choice)) return null;
+ return plan(story,state,next,base);
 }

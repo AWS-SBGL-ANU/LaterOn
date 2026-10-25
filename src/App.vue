@@ -5,16 +5,22 @@ import { storeToRefs } from 'pinia';
 import { useNarrativeStore,story } from './stores/narrativeStore';
 import ComicStage from './components/ComicStage.vue';
 import StoryDialogue from './components/StoryDialogue.vue';
-import { artFor,places,chapterNames } from './data/art';
-import { sceneArt,planAdvance } from './domain/presentation.mjs';
+import { places,chapterNames } from './data/art';
+import { sceneArt,planAdvance,planChoice,tileArt } from './domain/presentation.mjs';
+import { artDependencies } from './domain/choreography.mjs';
 import { prepareArt } from './services/assetManager';
 import { gesture,startGesture,stopGesture,requireGestureRelease } from './services/gestureService';
 import { setSound,setMusicMood,moodFor,unlockAudio,music } from './services/audio';
 const baseUrl=import.meta.env.BASE_URL;
+const coverArt=tileArt('cover','bench',8,baseUrl);
 const game=useNarrativeStore();const {state,node,beat,error,conflict,canContinue,endings}=storeToRefs(game);
 const screen=ref('cover'),modal=ref(''),transition=ref(false),transitionText=ref(''),artError=ref(''),simpleArt=ref(false),loading=ref(false),toast=ref(''),font=ref(28),reduced=ref(false),sound=ref(true),fullscreen=ref(false),newPrompt=ref(false);
 const dialogue=ref<InstanceType<typeof StoryDialogue>|null>(null);
-const systemReduced=ref(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+const comic=ref<InstanceType<typeof ComicStage>|null>(null);
+const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+const systemReduced=ref(motionPreference.matches),pageHidden=ref(document.hidden);
+function syncMotionPreference(){systemReduced.value=motionPreference.matches;}
+function syncVisibility(){pageHidden.value=document.hidden;}
 const instantText=computed(()=>reduced.value||systemReduced.value);
 const importInput=ref<HTMLInputElement|null>(null),dialog=ref<HTMLElement|null>(null);
 const endingDescriptions:Record<string,string>={E01:'不必每一天都盛大。一起吃饭、商量明天，就是后来。',E02:'不是没发生。只是现在，不用再补了。',E03:'有些话，说出口与没说出口，会走向不同的后来。',E04:'认真说完再见，然后走进各自的生活。'};
@@ -24,36 +30,52 @@ const completed=computed(()=>state.value?.phase==='completed');
 const currentArt=computed(()=>state.value?sceneArt(node.value,state.value,baseUrl):null);
 const memoryChoice=computed(()=>node.value?.id==='B11'?state.value?.decisions.B11:state.value?.decisions.S02);
 let lastAction=-Infinity,lastFocus:HTMLElement|null=null,transitionToken=0,toastTimer:any;
-let failedArtAction:'current'|'advance'='current';
+let failedArtAction:'current'|'advance'|'choice'='current',failedChoice='';
 function notify(text:string){toast.value=text;clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.value='',3500);}
 function command(fn:()=>void){if(transition.value||loading.value||performance.now()-lastAction<230)return;lastAction=performance.now();fn();requireGestureRelease();}
+function prepareScene(art){return Promise.all(artDependencies(art,baseUrl).map(url=>prepareArt(url)));}
 async function reveal(){
  loading.value=true;artError.value='';
- try{await prepareArt(currentArt.value.url);simpleArt.value=false;}catch(e){failedArtAction='current';artError.value='场景插画未能加载。你的剧情进度已保留。';}finally{loading.value=false;}
+ try{await prepareScene(currentArt.value);simpleArt.value=false;}catch(e){failedArtAction='current';artError.value='场景插画未能加载。你的剧情进度已保留。';}finally{loading.value=false;}
 }
 async function begin(){game.start();setMusicMood(moodFor(node.value,state.value));unlockAudio(sound.value);screen.value='story';newPrompt.value=false;await reveal();}
 async function resume(){game.resume();if(state.value){setMusicMood(moodFor(node.value,state.value));unlockAudio(sound.value);screen.value='story';await reveal();}}
 function toggleSound(){sound.value=!sound.value;unlockAudio(sound.value);}
 function newStory(){if(state.value||canContinue.value){newPrompt.value=true;modal.value='new';}else void begin();}
 async function advanceLine(skipArt=false){
- if(modal.value||artError.value||conflict.value||!state.value)return;
+ if(modal.value||transition.value||loading.value||artError.value||conflict.value||!state.value)return;
+ if(!skipArt&&comic.value&&!comic.value.settleMotion())return;
+ const sourceState=state.value;
  const plan=planAdvance(story,state.value,baseUrl);if(!plan)return;
  if(plan.artChanged&&!skipArt){
   loading.value=true;
-  try{await prepareArt(plan.art.url);}catch{failedArtAction='advance';artError.value='下一幅插画未能加载。你可以重试，或选择简化画面继续。';return;}finally{loading.value=false;}
+  try{await prepareScene(plan.art);}catch{failedArtAction='advance';artError.value='下一幅插画未能加载。你可以重试，或选择简化画面继续。';return;}finally{loading.value=false;}
  }
+ if(state.value!==sourceState||screen.value!=='story'||modal.value)return;
  if(plan.crossScene){
   const token=++transitionToken;transitionText.value=`${plan.node.time.split('。')[0]}\n${places[plan.node.backgroundId]}`;transition.value=true;requireGestureRelease();
-  await delay(reduced.value?70:480);if(token!==transitionToken)return;
+  await delay(instantText.value?70:480);if(token!==transitionToken)return;
+  if(state.value!==sourceState||screen.value!=='story'){transition.value=false;return;}
   game.next();simpleArt.value=skipArt;
-  await delay(reduced.value?70:650);if(token===transitionToken)transition.value=false;return;
+  await delay(instantText.value?70:650);if(token===transitionToken)transition.value=false;return;
  }
  game.next();if(plan.artChanged)simpleArt.value=skipArt;
 }
-async function retryArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine();else await reveal();}
-async function continueWithoutArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine(true);else simpleArt.value=true;}
+async function retryArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine();else if(action==='choice')await applyChoice(failedChoice);else await reveal();}
+async function continueWithoutArt(){const action=failedArtAction;artError.value='';if(action==='advance')await advanceLine(true);else if(action==='choice')await applyChoice(failedChoice,true);else simpleArt.value=true;}
 const delay=(ms:number)=>new Promise(resolve=>setTimeout(resolve,ms));
-function choose(id:string){command(()=>{if(!conflict.value&&!modal.value&&!artError.value)game.select(id);});}
+async function applyChoice(id:string,skipArt=false){
+ if(conflict.value||modal.value||transition.value||loading.value||artError.value||!state.value)return;
+ const sourceState=state.value;
+ const plan=planChoice(story,state.value,id,baseUrl);if(!plan)return;
+ if(plan.artChanged&&!skipArt){
+  loading.value=true;
+  try{await prepareScene(plan.art);}catch{failedArtAction='choice';failedChoice=id;artError.value='这一镜插画未能加载。你的选择还没有提交，可以重试。';return;}finally{loading.value=false;}
+ }
+ if(state.value!==sourceState||screen.value!=='story'||modal.value)return;
+ game.select(id);if(plan.artChanged)simpleArt.value=skipArt;
+}
+function choose(id:string){command(()=>void applyChoice(id));}
 function advance(){command(()=>{if(modal.value||artError.value||conflict.value)return;dialogue.value?.revealOrAdvance();});}
 function openModal(name:string){lastFocus=document.activeElement as HTMLElement;modal.value=name;requireGestureRelease();nextTick(()=>dialog.value?.querySelector<HTMLButtonElement>('button')?.focus());}
 function closeModal(){modal.value='';requireGestureRelease();nextTick(()=>lastFocus?.focus());}
@@ -74,13 +96,22 @@ function keydown(event:KeyboardEvent){
 watch(modal,async name=>{if(name){await nextTick();dialog.value?.querySelector<HTMLButtonElement>('button')?.focus();}});
 watch([font,reduced,sound],()=>{try{localStorage.setItem('hou-lai-ne.settings',JSON.stringify({font:font.value,reduced:reduced.value,sound:sound.value,musicVersion:2}));}catch{}setSound(sound.value);});
 watch(()=>[node.value?.id,state.value?.phase,state.value?.decisions[state.value?.nodeId]],()=>setMusicMood(moodFor(node.value,state.value)));
-watch(()=>state.value?.phase,phase=>{requireGestureRelease();if(phase==='choosing'){for(const choice of node.value.choices.slice(0,2)){const target=choice.routes?.[0]?.to;if(target){const art=artFor(story.nodes[target],state.value.facts);void prepareArt(art.url).catch(()=>{});}}}});
-onMounted(()=>{try{const v=JSON.parse(localStorage.getItem('hou-lai-ne.settings')||'{}');if([24,28,32].includes(v.font))font.value=v.font;reduced.value=v.reduced===true;if(v.musicVersion===2)sound.value=v.sound!==false;}catch{}document.addEventListener('keydown',keydown);document.addEventListener('fullscreenchange',syncFullscreen);void prepareArt(`${baseUrl}art/cover.png`).catch(()=>{});});
-onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.removeEventListener('fullscreenchange',syncFullscreen);clearTimeout(toastTimer);transitionToken++;stopGesture();setSound(false);});
+watch(()=>state.value?.phase,()=>requireGestureRelease());
+// Prepare the actual next shot, including conditional choice responses. The
+// presentation planner works on a copy and cannot advance the player's save.
+watch(()=>[state.value?.nodeId,state.value?.phase,state.value?.index],()=>{
+ if(!state.value||state.value.phase==='completed')return;
+ const plans=state.value.phase==='choosing'
+  ?node.value.choices.map(choice=>planChoice(story,state.value,choice.id,baseUrl))
+  :[planAdvance(story,state.value,baseUrl)];
+ for(const url of new Set(plans.filter(Boolean).flatMap(plan=>artDependencies(plan.art,baseUrl))))void prepareArt(url).catch(()=>{});
+});
+onMounted(()=>{try{const v=JSON.parse(localStorage.getItem('hou-lai-ne.settings')||'{}');if([24,28,32].includes(v.font))font.value=v.font;reduced.value=v.reduced===true;if(v.musicVersion===2)sound.value=v.sound!==false;}catch{}document.addEventListener('keydown',keydown);document.addEventListener('fullscreenchange',syncFullscreen);document.addEventListener('visibilitychange',syncVisibility);motionPreference.addEventListener('change',syncMotionPreference);void prepareArt(coverArt.url).catch(()=>{});});
+onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.removeEventListener('fullscreenchange',syncFullscreen);document.removeEventListener('visibilitychange',syncVisibility);motionPreference.removeEventListener('change',syncMotionPreference);clearTimeout(toastTimer);transitionToken++;stopGesture();setSound(false);});
 </script>
 
 <template>
- <div class="app-shell" :class="{'reduce-motion':reduced,'is-playing':screen==='story'}" :style="{'--dialogue-size':`${font}px`}">
+ <div class="app-shell" :class="{'reduce-motion':instantText,'is-playing':screen==='story'}" :style="{'--dialogue-size':`${font}px`}">
   <header class="topbar" :inert="!!modal||transition">
    <button class="wordmark" aria-label="回到故事封面" @click="screen==='cover'?null:openModal('menu')"><span class="logo-scribble">♡</span> 后来呢<span class="logo-dot">✦</span></button>
    <span class="top-caption">{{ screen==='cover'?'小五与小梦的互动漫画':chapter }}</span>
@@ -93,14 +124,14 @@ onUnmounted(()=>{document.removeEventListener('keydown',keydown);document.remove
 
   <main v-if="screen==='cover'" class="cute-cover" :inert="!!modal||transition">
    <div class="cover-stickers" aria-hidden="true"><span>✦</span><span>♡</span><span>✿</span><span>✦</span></div>
-   <section class="cute-cover-picture"><img :src="`${baseUrl}art/cover.png`" alt="《后来呢》封面：小五和小梦在长椅上一起吃冰淇淋，慢慢靠近，慢慢喜欢。"><span class="cover-charm">小五 × 小梦 <i>♡</i></span></section>
+   <section class="cute-cover-picture"><div class="cover-sketch" role="img" aria-label="小五和小梦坐在长椅上聊天的粗铅笔淡彩手绘封面" :style="{backgroundImage:`url(${coverArt.url})`,backgroundPosition:coverArt.position,backgroundSize:coverArt.size}"></div><div class="cover-title"><h1>后来呢</h1><p>慢慢靠近，慢慢喜欢。</p></div><span class="cover-charm">小五 × 小梦 <i>♡</i></span></section>
    <div class="cute-cover-controls"><p class="cover-invitation">一支借来的笔，一口没吃完的冰淇淋。<br><span>那些没说出口的喜欢，后来呢？</span></p><div class="cover-buttons"><button class="button primary" @click="command(newStory)">翻开故事 <span>♡</span></button><button v-if="canContinue" class="button secondary" @click="command(()=>void resume())">接着上次 <span>↝</span></button><button class="button memory-button" @click="openModal('memories')">回忆小盒子 <span>✿</span></button></div><button class="text-button how-to" @click="openModal('help')">第一次见面？怎么玩呀 ♡</button><p class="cover-music-note">♫ 轻点翻开，让配乐陪你慢慢读</p></div>
   </main>
 
   <main v-else-if="state&&node" class="reader" :inert="!!modal||transition">
    <div class="reader-heading"><div class="chapter-tag"><span class="eyebrow">{{ chapter }}</span><h1>{{ completed?'故事，先写到这里。':node.title }}</h1></div><div class="reader-meta"><span class="location-dot"></span>{{ places[node.backgroundId] }}<span class="chapter-markers" aria-label="章节进度"><i v-for="n in 5" :key="n" :class="{active:n<=chapterIndex}"></i></span></div></div>
    <div class="stage-slot"><div class="stage-frame">
-    <ComicStage :node="node" :facts="state.facts" :art="currentArt" :simple="simpleArt" :choice="memoryChoice" />
+    <ComicStage ref="comic" :node="node" :facts="state.facts" :art="currentArt" :simple="simpleArt" :choice="memoryChoice" :paused="!!modal||transition||loading||!!artError||conflict||pageHidden" :reduced="instantText" />
     <div class="scene-top-wash" aria-hidden="true"></div>
     <span class="paper-binding" aria-hidden="true"></span>
     <div class="stage-stamp">{{ node.time.split('。')[0] }}</div>

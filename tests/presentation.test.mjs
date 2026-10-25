@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {newGame,advance,choose,validateSave} from '../src/domain/engine.mjs';
-import {backgroundArt,sceneArt,planAdvance} from '../src/domain/presentation.mjs';
+import {backgroundArt,sceneArt,planAdvance,planChoice} from '../src/domain/presentation.mjs';
 const story=JSON.parse(fs.readFileSync(new URL('../src/data/story.json',import.meta.url),'utf8'));
 
 function reach(id, decisions={}) {
@@ -23,13 +23,13 @@ test('Planning a page turn preserves the saved line until the illustration is re
  while(state.index<state.queue.length-1)advance(story,state);
  const final=structuredClone(state),next=planAdvance(story,state,'./');
  assert.deepEqual(state,final);assert.equal(next.node.id,'S02');assert.equal(next.crossScene,true);
- assert.equal(next.art.url,'./art/atlases/moments-classroom.png');
+ assert.equal(next.art.url,'./art/sketch/school.png');
 });
 
-test('A same-place branch keeps the stage while all age variants have distinct artwork',()=>{
+test('A same-place branch dissolves its response without a location transition, while age variants stay distinct',()=>{
  const state=reach('S09');readToChoice(state);choose(story,state,'A');
  while(state.index<state.queue.length-1)advance(story,state);
- const plan=planAdvance(story,state);assert.equal(plan.node.id,'B02');assert.equal(plan.artChanged,false);assert.equal(plan.crossScene,false);
+ const plan=planAdvance(story,state);assert.equal(plan.node.id,'B02');assert.equal(plan.artChanged,true);assert.equal(plan.crossScene,false);
  const variants=['high','university','adult'].map(era=>backgroundArt({backgroundId:'BG22'},{era}));
  assert.equal(new Set(variants.map(v=>v.id)).size,3);assert.equal(new Set(variants.map(v=>v.position)).size,3);
 });
@@ -91,4 +91,66 @@ test('Every reading phase along the five acceptance routes can be exported and r
    assert.ok(count<1499,'route must terminate');
   }
  }
+});
+
+test('A choice preserves the final pen pose instead of teleporting the pen back to the desk',()=>{
+ const state=reach('S15');readToChoice(state);
+ const before=sceneArt(story.nodes.S15,state);
+ assert.equal(before.id,'pen-writing');
+ const copy=structuredClone(state),preview=planChoice(story,state,'A');
+ assert.deepEqual(state,copy);
+ assert.equal(preview.art.id,before.id);
+ choose(story,state,'A');
+ assert.equal(sceneArt(story.nodes.S15,state).id,before.id);
+ const restored=validateSave(story,structuredClone(state));
+ assert.equal(sceneArt(story.nodes.S15,restored).id,before.id);
+});
+
+test('Pen actions, a shared spoon and a shoulder follow their authored order',()=>{
+ const expectations={
+  S15:['BG28','pen-offer','school-fingers','pen-fall','pen-floor','pen-reach','pen-near','pen-pickup','pen-writing'],
+  S17:['BG30','bench-ask','bench-pass','bench-spoon','school-share-icecream','bench-shy','bench-talk'],
+  S19:['BG32','bus-offer','school-shoulder']
+ };
+ for(const [id,expected] of Object.entries(expectations)){
+  const state=reach(id),seen=[];
+  while(state.phase!=='choosing'){
+   const shot=sceneArt(story.nodes[id],state);
+   if(shot.id!==seen.at(-1))seen.push(shot.id);
+   assert.equal(shot.boySide,'right');assert.equal(shot.size,'300% 300%');
+   advance(story,state);
+  }
+  assert.deepEqual(seen,expected);
+ }
+});
+
+test('The airport hug follows a question, agreement, open arms and a step forward',()=>{
+ const state=reach('S10');readToChoice(state);
+ const saved=structuredClone(state),preview=planChoice(story,state,'A');
+ assert.deepEqual(state,saved);
+ assert.equal(preview.art.id,'airport-breakfast');
+ choose(story,state,'A');
+ const seen=[];
+ while(state.nodeId==='S10'){
+  const art=sceneArt(story.nodes.S10,state);
+  if(art.id!==seen.at(-1))seen.push(art.id);
+  advance(story,state);
+ }
+ assert.deepEqual(seen,['airport-breakfast','airport-open','airport-step','airport-hug','airport-hold','airport-release']);
+ const response=story.nodes.S10.choices[0].response;
+ const hug=response.findIndex(b=>b.art==='airport-hug');
+ assert.ok(response.slice(0,hug).some(b=>b.text==='我能抱你一下吗？'));
+ assert.ok(response.slice(0,hug).some(b=>b.text==='嗯。先把袋子放好。'));
+ for(const choice of ['B','C']){
+  const alternate=reach('S10');readToChoice(alternate);choose(story,alternate,choice);
+  while(alternate.nodeId==='S10'){
+   assert.ok(!['airport-hug','airport-hold'].includes(sceneArt(story.nodes.S10,alternate).id));
+   advance(story,alternate);
+  }
+ }
+});
+
+test('A bad choice preview leaves progress untouched',()=>{
+ const state=reach('S17');readToChoice(state);const before=structuredClone(state);
+ assert.equal(planChoice(story,state,'missing'),null);assert.deepEqual(state,before);
 });
