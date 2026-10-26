@@ -30,7 +30,7 @@ const caption=computed(()=>{
 <template>
  <div class="comic-stage" :class="{'simple-art':simple,'individual-art':art.individual}" role="img" :aria-label="`${node.title}的粗蜡笔手绘场景`">
   <div v-if="!simple" class="shot-panel" aria-hidden="true">
-   <svg class="scene-picture" :viewBox="`${crop.x} ${crop.y} ${crop.width} ${crop.height}`" :width="crop.width" :height="crop.height" :style="{'--shot-native-width':`${crop.width}px`}" :preserveAspectRatio="art.individual?'xMidYMid slice':'xMidYMid meet'" aria-hidden="true">
+   <svg class="scene-picture" :viewBox="`${crop.x} ${crop.y} ${crop.width} ${crop.height}`" :width="crop.width" :height="crop.height" :style="{'--shot-native-width':`${crop.width}px`,'--shot-native-height':`${crop.height}px`}" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
     <image :href="art.url" x="0" y="0" :width="crop.sourceWidth" :height="crop.sourceHeight" />
    </svg>
   </div>

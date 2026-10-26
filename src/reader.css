@@ -8,14 +8,15 @@
 .is-playing .scene-art {position:absolute;inset:0;background-repeat:no-repeat;}
 .is-playing .scene-picture {display:block;position:static;width:min(100%,var(--shot-native-width));height:auto;max-height:100%;overflow:hidden;filter:none;}
 .is-playing .comic-stage.individual-art>.shot-panel {padding:0;}
-.is-playing .individual-art .scene-picture {width:100%;height:100%;max-height:none;}
+/* Fit the whole original canvas and cap it at native size; never zoom to crop. */
+.is-playing .individual-art .scene-picture {width:100%;height:100%;max-width:var(--shot-native-width);max-height:var(--shot-native-height);}
 .reader-hud {position:absolute;top:max(14px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));left:max(18px,env(safe-area-inset-left));z-index:30;display:flex;align-items:center;gap:9px;pointer-events:none;}
 .reader-hud .reader-place {margin-right:auto;color:#665e52;font-size:14px;background:#fffaf0c9;padding:7px 13px;border-radius:20px;}
 .reader-hud button {pointer-events:auto;background:#fffaf0e8;color:#6e6254;border:1px solid #c7bda6;border-radius:20px;padding:8px 15px;font-size:14px;min-height:38px;}
 .is-playing .stage-stamp {top:65px;left:20px;right:auto;bottom:auto;font-size:12px;max-width:70%;background:#fffaf0bf;}
-.is-playing .in-scene-bubble {z-index:20;top:auto;bottom:max(28px,env(safe-area-inset-bottom));left:5%;right:auto;width:min(760px,84%);max-width:84%;min-height:0;transform:none;background:#fffdf4f0;box-shadow:0 8px 35px #63534019;backdrop-filter:blur(9px);padding:18px 25px 12px;border-radius:16px;}
+.is-playing .in-scene-bubble {z-index:20;top:auto;bottom:max(28px,env(safe-area-inset-bottom));left:5%;right:auto;width:min(760px,84%);max-width:84%;min-height:0;transform:none;background:rgba(255,253,244,.38);box-shadow:0 6px 24px #6353400d;backdrop-filter:blur(1px);padding:18px 25px 12px;border-radius:16px;}
 .is-playing .in-scene-bubble.right {left:auto;right:5%;}
-.is-playing .in-scene-bubble.narration {left:8%;right:8%;width:auto;max-width:none;transform:none;background:#fffdf4eb;}
+.is-playing .in-scene-bubble.narration {left:8%;right:8%;width:auto;max-width:none;transform:none;background:rgba(255,253,244,.34);}
 .is-playing .in-scene-bubble:after {display:none;}
 .is-playing .bubble-copy {font-size:var(--dialogue-size);line-height:1.55;}
 .is-playing .bubble-name {font-size:16px;}
