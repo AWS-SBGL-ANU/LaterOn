@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T21:22:41.748Z",
+  "updatedAt": "2026-10-26T11:02:34.542Z",
   "styleId": "crayon-master-20261025",
   "reference": "reference-preview/crayon-master-20261025.png",
   "referenceSha256": "71840ed873b6cf976b7d744a5a5f82042e3f52ab25cff59f08e2852c9e65c18a",
@@ -298,9 +298,7 @@
     "B08-dialogue-1",
     "B08-dialogue-2",
     "B08-dialogue-3",
-    "B08-A-0"
-  ],
-  "remaining": [
+    "B08-A-0",
     "B08-A-1",
     "B08-B-0",
     "B08-B-1",
@@ -422,6 +420,7 @@
     "E04-B-0",
     "E04-B-1"
   ],
-  "coverCompleted": false,
+  "remaining": [],
+  "coverCompleted": true,
   "note": "Only independently generated, visually reviewed, manifest-listed wax-crayon images count as completed. Earlier styles do not count. Pending shots retain their legacy artwork. Actual native dimensions are stored per file; no upscaled image is counted as new detail. No browser, tests, build or deployment run."
 }
