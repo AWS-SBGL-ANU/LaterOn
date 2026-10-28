@@ -6,7 +6,7 @@
 
 **慢慢靠近，慢慢喜欢。**
 
-[在线试玩 →](https://lateron-purelove.netlify.app/)
+[在线试玩 →](https://later-and-on.netlify.app/)
 
 ![后来呢 · 慢慢靠近，慢慢喜欢。游戏封面与全文统一采用简练线条、轻淡彩和暖白留白](public/art/cover-title-soft.png)
 
